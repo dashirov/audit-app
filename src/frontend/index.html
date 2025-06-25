@@ -6,37 +6,63 @@
     <title>Product Analytics Maturity Assessment</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
+        #rubric-container { display: flex; flex-direction: column; gap: 15px; }
         .category-card {
             border: 1px solid #ccc;
             border-radius: 10px;
             padding: 15px;
-            margin-bottom: 10px;
             background: #f9f9f9;
             cursor: move;
         }
-        .category-header { font-size: 1.2em; font-weight: bold; }
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+        .category-header {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .priority-label {
+            font-weight: bold;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .horizontal-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        select {
+            padding: 5px;
+        }
         .rounded-text {
             background-color: #e6f7ff;
             padding: 5px 10px;
             border-radius: 15px;
             display: inline-block;
-            margin-top: 5px;
+            white-space: nowrap;
         }
         .star-rating {
             color: gold;
             font-size: 1.2em;
-            margin-top: 5px;
-        }
-        .narrative-container {
-            margin-top: 10px;
         }
         .narrative-label {
             font-weight: bold;
-            margin-bottom: 5px;
             display: block;
         }
         .narrative-input {
-            width: 100%;
+            width: 95%;
             height: 100px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -70,46 +96,77 @@
         container.innerHTML = "";
 
         Object.entries(grouped).forEach(([category, levels], idx) => {
-            const div = document.createElement("div");
-            div.className = "category-card";
-            div.draggable = true;
-            div.dataset.category = category;
+            const card = document.createElement("div");
+            card.className = "category-card";
+            card.draggable = true;
+            card.dataset.category = category;
 
             const header = document.createElement("div");
-            header.className = "category-header";
-            header.innerText = category;
+            header.className = "card-header";
+            header.innerHTML = `<div class="category-header">${category}</div>
+                             <div class="priority-label">Improvement Priority: <span class="priority">${idx + 1}</span></div>`;
 
-            const select = document.createElement("select");
-            select.innerHTML = '<option value="">Select Maturity Level</option>' +
+            const row = document.createElement("div");
+            row.className = "row";
+
+            // Observations Column
+            const obsCol = document.createElement("div");
+            obsCol.className = "column";
+            const obsSelect = document.createElement("select");
+            obsSelect.innerHTML = '<option value="">Select Maturity Level</option>' +
                 levels.map(l => `<option value="${l.Score}">${l.Description}</option>`).join('');
-
-            const detail = document.createElement("div");
-
-            const narrativeContainer = document.createElement("div");
-            narrativeContainer.className = "narrative-container";
-            narrativeContainer.innerHTML = `
-          <label class="narrative-label">Narrative & Supporting Evidence:</label>
+            const obsRating = document.createElement("div");
+            // const obsText = document.createElement("div");
+            const obsNarrative = document.createElement("div");
+            obsNarrative.innerHTML = `
+          <label class="narrative-label">Supporting Evidence:</label>
           <div class="narrative-input" contenteditable="true"></div>
         `;
 
-            select.addEventListener("change", () => {
-                const level = levels.find(l => l.Score == select.value);
-                if (level) {
-                    detail.innerHTML = `
-              <div class="star-rating">${'&#9733;'.repeat(level.Score)}${'&#9734;'.repeat(5 - level.Score)}</div>
-              <div class="rounded-text">${level["Maturity Level"]}</div>
-              <p>${level.Description}</p>
-            `;
+            obsSelect.addEventListener("change", () => {
+                const selected = levels.find(l => l.Score == obsSelect.value);
+                if (selected) {
+                    obsRating.innerHTML = `
+              <div class="star-rating">${'&#9733;'.repeat(selected.Score)}${'&#9734;'.repeat(5 - selected.Score)}</div>
+              <div class="rounded-text">${selected["Maturity Level"]}</div>`;
+                    // obsText.innerHTML = `<p>${selected.Description}</p>`;
+                    tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>' +
+                        levels.filter(l => l.Score >= selected.Score)
+                            .map(l => `<option value="${l.Score}">${l.Description}</option>`).join('');
                 } else {
-                    detail.innerHTML = "";
+                    // obsRating.innerHTML = obsText.innerHTML = tgtSelect.innerHTML = '';
                 }
             });
 
-            div.appendChild(header);
-            div.appendChild(select);
-            div.appendChild(detail);
-            div.appendChild(narrativeContainer);
-            container.appendChild(div);
+            // Improvement Plan Column
+            const tgtCol = document.createElement("div");
+            tgtCol.className = "column";
+            const tgtSelect = document.createElement("select");
+            tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>';
+            const tgtRating = document.createElement("div");
+            const tgtNarrative = document.createElement("div");
+            tgtNarrative.innerHTML = `
+          <label class="narrative-label">Improvement Plan:</label>
+          <div class="narrative-input" contenteditable="true"></div>
+        `;
+
+            tgtSelect.addEventListener("change", () => {
+                const selected = levels.find(l => l.Score == tgtSelect.value);
+                if (selected) {
+                    tgtRating.innerHTML = `
+              <div class="star-rating">${'&#9733;'.repeat(selected.Score)}${'&#9734;'.repeat(5 - selected.Score)}</div>
+              <div class="rounded-text">${selected["Maturity Level"]}</div>`;
+                } else {
+                    tgtRating.innerHTML = '';
+                }
+            });
+
+            obsCol.append(obsSelect, obsRating,/* obsText, */ obsNarrative);
+            tgtCol.append(tgtSelect, tgtRating, tgtNarrative);
+            row.append(obsCol, tgtCol);
+
+            card.append(header, row);
+            container.appendChild(card);
         });
 
         makeSortable(container);
@@ -117,12 +174,10 @@
 
     function makeSortable(container) {
         let draggingEl;
-
         container.addEventListener("dragstart", e => {
             draggingEl = e.target;
             e.dataTransfer.effectAllowed = "move";
         });
-
         container.addEventListener("dragover", e => {
             e.preventDefault();
             const afterEl = getDragAfterElement(container, e.clientY);
@@ -131,6 +186,7 @@
             } else {
                 container.insertBefore(draggingEl, afterEl);
             }
+            updatePriorities(container);
         });
     }
 
@@ -141,6 +197,14 @@
             const offset = y - box.top - box.height / 2;
             return offset < 0 && offset > closest.offset ? { offset, element: child } : closest;
         }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
+
+    function updatePriorities(container) {
+        const cards = container.querySelectorAll('.category-card');
+        cards.forEach((card, index) => {
+            const prioritySpan = card.querySelector('.priority');
+            if (prioritySpan) prioritySpan.textContent = index + 1;
+        });
     }
 </script>
 </body>
