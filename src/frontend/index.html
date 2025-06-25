@@ -69,6 +69,24 @@
             padding: 10px;
             font-family: Arial, sans-serif;
         }
+        .category-objective {
+            margin-top: 5px;
+            font-style: italic;
+            color: #333;
+        }
+        .category-activities {
+            margin-top: 3px;
+            font-size: 0.9em;
+            color: #555;
+        }
+        .category-activities ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .category-activities li {
+            text-align: left;
+            margin-bottom: 4px;
+        }
     </style>
 </head>
 <body>
@@ -77,13 +95,16 @@
 
 <script>
     let rubricData = [];
+    let subjectData = {};
 
-    fetch('/rubric')
-        .then(res => res.json())
-        .then(data => {
-            rubricData = data;
-            renderRubric();
-        });
+    Promise.all([
+        fetch('/rubric').then(res => res.json()),
+        fetch('/subject').then(res => res.json())
+    ]).then(([rubric, subjects]) => {
+        rubricData = rubric;
+        subjects.forEach(s => subjectData[s.Category] = s);
+        renderRubric();
+    });
 
     function renderRubric() {
         const grouped = rubricData.reduce((acc, item) => {
@@ -106,6 +127,24 @@
             header.innerHTML = `<div class="category-header">${category}</div>
                              <div class="priority-label">Improvement Priority: <span class="priority">${idx + 1}</span></div>`;
 
+            const subject = subjectData[category] || {};
+            const objective = document.createElement("div");
+            objective.className = "category-objective";
+            objective.innerText = "Objective: " + (subject.Objective || "Not defined");
+
+            const activities = document.createElement("div");
+            activities.className = "category-activities";
+            const activityItems = (subject.Activities || "")
+                .split(/- /)  // split on line breaks or dashes or bullets
+                .map(item => item.trim())
+                .filter(item => item.length > 0);
+            activities.innerHTML = `<strong>Activities:</strong><ul>` +
+                activityItems.map(item => `<li>${item}</li>`).join('') +
+                `</ul>`;
+
+            header.insertBefore(objective, header.children[1]);  // before priority
+            header.insertBefore(activities, header.children[2]); // also before priority
+
             const row = document.createElement("div");
             row.className = "row";
 
@@ -116,10 +155,13 @@
             obsSelect.innerHTML = '<option value="">Select Maturity Level</option>' +
                 levels.map(l => `<option value="${l.Score}">${l.Description}</option>`).join('');
             const obsRating = document.createElement("div");
-            // const obsText = document.createElement("div");
+            obsRating.innerHTML = `
+          <div class="star-rating">${'&#9734;'.repeat(5)}</div>
+          <div class="rounded-text">Not Assessed</div>`;
+
             const obsNarrative = document.createElement("div");
             obsNarrative.innerHTML = `
-          <label class="narrative-label">Supporting Evidence:</label>
+          <label class="narrative-label">Narrative & Supporting Evidence:</label>
           <div class="narrative-input" contenteditable="true"></div>
         `;
 
@@ -129,12 +171,15 @@
                     obsRating.innerHTML = `
               <div class="star-rating">${'&#9733;'.repeat(selected.Score)}${'&#9734;'.repeat(5 - selected.Score)}</div>
               <div class="rounded-text">${selected["Maturity Level"]}</div>`;
-                    // obsText.innerHTML = `<p>${selected.Description}</p>`;
+
                     tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>' +
                         levels.filter(l => l.Score >= selected.Score)
                             .map(l => `<option value="${l.Score}">${l.Description}</option>`).join('');
                 } else {
-                    // obsRating.innerHTML = obsText.innerHTML = tgtSelect.innerHTML = '';
+                    obsRating.innerHTML = `
+              <div class="star-rating">${'&#9734;'.repeat(5)}</div>
+              <div class="rounded-text">Not Assessed</div>`;
+                    tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>';
                 }
             });
 
@@ -144,9 +189,12 @@
             const tgtSelect = document.createElement("select");
             tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>';
             const tgtRating = document.createElement("div");
+            tgtRating.innerHTML = `
+          <div class="star-rating">${'&#9734;'.repeat(5)}</div>
+          <div class="rounded-text">Not Assessed</div>`;
             const tgtNarrative = document.createElement("div");
             tgtNarrative.innerHTML = `
-          <label class="narrative-label">Improvement Plan:</label>
+          <label class="narrative-label">Improvement Plan Narrative:</label>
           <div class="narrative-input" contenteditable="true"></div>
         `;
 
@@ -157,11 +205,13 @@
               <div class="star-rating">${'&#9733;'.repeat(selected.Score)}${'&#9734;'.repeat(5 - selected.Score)}</div>
               <div class="rounded-text">${selected["Maturity Level"]}</div>`;
                 } else {
-                    tgtRating.innerHTML = '';
+                    tgtRating.innerHTML = `
+              <div class="star-rating">${'&#9734;'.repeat(5)}</div>
+              <div class="rounded-text">Not Assessed</div>`;
                 }
             });
 
-            obsCol.append(obsSelect, obsRating,/* obsText, */ obsNarrative);
+            obsCol.append(obsSelect, obsRating,obsNarrative);
             tgtCol.append(tgtSelect, tgtRating, tgtNarrative);
             row.append(obsCol, tgtCol);
 
