@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Analytics Maturity Assessment</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .category-card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+            cursor: move;
+        }
+        .category-header { font-size: 1.2em; font-weight: bold; }
+        .rounded-text {
+            background-color: #e6f7ff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .star-rating {
+            color: gold;
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Product Analytics Maturity Assessment</h1>
+<div id="rubric-container"></div>
+
+<script>
+    let rubricData = [];
+
+    fetch('/rubric')
+        .then(res => res.json())
+        .then(data => {
+            rubricData = data;
+            renderRubric();
+        });
+
+    function renderRubric() {
+        const grouped = rubricData.reduce((acc, item) => {
+            if (!acc[item.Category]) acc[item.Category] = [];
+            acc[item.Category].push(item);
+            return acc;
+        }, {});
+
+        const container = document.getElementById("rubric-container");
+        container.innerHTML = "";
+
+        Object.entries(grouped).forEach(([category, levels], idx) => {
+            const div = document.createElement("div");
+            div.className = "category-card";
+            div.draggable = true;
+            div.dataset.category = category;
+
+            const header = document.createElement("div");
+            header.className = "category-header";
+            header.innerText = category;
+
+            const select = document.createElement("select");
+            select.innerHTML = '<option value="">Select Maturity Level</option>' +
+                levels.map(l => `<option value="${l.Score}">${l.Description}</option>`).join('');
+
+            const detail = document.createElement("div");
+
+            select.addEventListener("change", () => {
+                const level = levels.find(l => l.Score == select.value);
+                if (level) {
+                    detail.innerHTML = `
+              <div class="star-rating">${'&#9733;'.repeat(level.Score)}${'&#9734;'.repeat(5 - level.Score)}</div>
+              <div class="rounded-text">${level["Maturity Level"]}</div>
+              <p>${level.Description}</p>
+            `;
+                } else {
+                    detail.innerHTML = "";
+                }
+            });
+
+            div.appendChild(header);
+            div.appendChild(select);
+            div.appendChild(detail);
+            container.appendChild(div);
+        });
+
+        makeSortable(container);
+    }
+
+    function makeSortable(container) {
+        let draggingEl;
+
+        container.addEventListener("dragstart", e => {
+            draggingEl = e.target;
+            e.dataTransfer.effectAllowed = "move";
+        });
+
+        container.addEventListener("dragover", e => {
+            e.preventDefault();
+            const afterEl = getDragAfterElement(container, e.clientY);
+            if (afterEl == null) {
+                container.appendChild(draggingEl);
+            } else {
+                container.insertBefore(draggingEl, afterEl);
+            }
+        });
+    }
+
+    function getDragAfterElement(container, y) {
+        const elements = [...container.querySelectorAll('.category-card:not(.dragging)')];
+        return elements.reduce((closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            return offset < 0 && offset > closest.offset ? { offset, element: child } : closest;
+        }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
+</script>
+</body>
+</html>
