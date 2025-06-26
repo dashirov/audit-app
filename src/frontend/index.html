@@ -40,7 +40,7 @@
         }
         .horizontal-group {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 10px;
         }
         select {
@@ -73,9 +73,10 @@
             margin-top: 5px;
             font-style: italic;
             color: #333;
+            margin-bottom: 2px;
         }
         .category-activities {
-            margin-top: 3px;
+            margin-top: 0px;
             font-size: 0.9em;
             color: #555;
         }
@@ -86,6 +87,7 @@
         .category-activities li {
             text-align: left;
             margin-bottom: 4px;
+            list-style-type: disc;
         }
     </style>
 </head>
@@ -102,14 +104,15 @@
         fetch('/subject').then(res => res.json())
     ]).then(([rubric, subjects]) => {
         rubricData = rubric;
-        subjects.forEach(s => subjectData[s.Category] = s);
+        subjects.forEach(s => subjectData[s.name] = s);
         renderRubric();
     });
 
     function renderRubric() {
         const grouped = rubricData.reduce((acc, item) => {
-            if (!acc[item.Category]) acc[item.Category] = [];
-            acc[item.Category].push(item);
+            if (!acc[item.category]) acc[item.category] = [];
+            acc[item.category].push(item);
+            console.log(acc)
             return acc;
         }, {});
 
@@ -128,22 +131,28 @@
                              <div class="priority-label">Improvement Priority: <span class="priority">${idx + 1}</span></div>`;
 
             const subject = subjectData[category] || {};
+            // Insert Objective and Activities below the category name, above priority label
             const objective = document.createElement("div");
             objective.className = "category-objective";
-            objective.innerText = "Objective: " + (subject.Objective || "Not defined");
+            objective.innerHTML = `<strong>Objective:</strong> ${subject.objective || "Not defined"}`;
 
             const activities = document.createElement("div");
             activities.className = "category-activities";
-            const activityItems = (subject.Activities || "")
-                .split(/- /)  // split on line breaks or dashes or bullets
-                .map(item => item.trim())
-                .filter(item => item.length > 0);
+            // Activities bulleted and left-aligned
+            let activityItems = [];
+            if (subject.activities) {
+                // Try to split by newlines or "- "
+                activityItems = subject.activities.split(/\r?\n|^- /m)
+                  .map(item => item.replace(/^- /, '').trim())
+                  .filter(item => item.length > 0);
+            }
             activities.innerHTML = `<strong>Activities:</strong><ul>` +
                 activityItems.map(item => `<li>${item}</li>`).join('') +
                 `</ul>`;
 
-            header.insertBefore(objective, header.children[1]);  // before priority
-            header.insertBefore(activities, header.children[2]); // also before priority
+            // Insert after category-header, before priority label
+            header.insertBefore(objective, header.children[1]);
+            header.insertBefore(activities, header.children[2]);
 
             const row = document.createElement("div");
             row.className = "row";
@@ -151,59 +160,73 @@
             // Observations Column
             const obsCol = document.createElement("div");
             obsCol.className = "column";
+            // Horizontal group for select and star rating
+            const obsHorizontal = document.createElement("div");
+            obsHorizontal.className = "horizontal-group";
             const obsSelect = document.createElement("select");
             obsSelect.innerHTML = '<option value="">Select Maturity Level</option>' +
-                levels.map(l => `<option value="${l.Score}">${l.Description}</option>`).join('');
+                levels.map(l => `<option value="${l.score}">${l.description}</option>`).join('');
             const obsRating = document.createElement("div");
             obsRating.innerHTML = `
-          <div class="star-rating">${'&#9734;'.repeat(5)}</div>
-          <div class="rounded-text">Not Assessed</div>`;
+              <div class="star-rating">${'&#9734;'.repeat(5)}</div>
+              <div class="rounded-text">Not Assessed</div>`;
+            obsHorizontal.append(obsSelect, obsRating);
 
             const obsNarrative = document.createElement("div");
             obsNarrative.innerHTML = `
-          <label class="narrative-label">Narrative & Supporting Evidence:</label>
-          <div class="narrative-input" contenteditable="true"></div>
-        `;
+              <label class="narrative-label">Narrative & Supporting Evidence:</label>
+              <div class="narrative-input" contenteditable="true"></div>
+            `;
 
+            // Improvement Plan Column
+            const tgtCol = document.createElement("div");
+            tgtCol.className = "column";
+            // Horizontal group for select and star rating
+            const tgtHorizontal = document.createElement("div");
+            tgtHorizontal.className = "horizontal-group";
+            const tgtSelect = document.createElement("select");
+            tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>';
+            const tgtRating = document.createElement("div");
+            tgtRating.innerHTML = `
+              <div class="star-rating">${'&#9734;'.repeat(5)}</div>
+              <div class="rounded-text">Not Assessed</div>`;
+            tgtHorizontal.append(tgtSelect, tgtRating);
+            const tgtNarrative = document.createElement("div");
+            tgtNarrative.innerHTML = `
+              <label class="narrative-label">Improvement Plan Narrative:</label>
+              <div class="narrative-input" contenteditable="true"></div>
+            `;
+
+            // Sync star and level_name for obs
             obsSelect.addEventListener("change", () => {
-                const selected = levels.find(l => l.Score == obsSelect.value);
+                const selected = levels.find(l => l.score == obsSelect.value);
                 if (selected) {
                     obsRating.innerHTML = `
-              <div class="star-rating">${'&#9733;'.repeat(selected.Score)}${'&#9734;'.repeat(5 - selected.Score)}</div>
-              <div class="rounded-text">${selected["Maturity Level"]}</div>`;
-
+              <div class="star-rating">${'&#9733;'.repeat(selected.score)}${'&#9734;'.repeat(5 - selected.score)}</div>
+              <div class="rounded-text">${selected["level_name"]}</div>`;
+                    // Update tgtSelect to only allow levels >= selected
                     tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>' +
-                        levels.filter(l => l.Score >= selected.Score)
-                            .map(l => `<option value="${l.Score}">${l.Description}</option>`).join('');
+                        levels.filter(l => l.score >= selected.score)
+                            .map(l => `<option value="${l.score}">${l.description}</option>`).join('');
                 } else {
                     obsRating.innerHTML = `
               <div class="star-rating">${'&#9734;'.repeat(5)}</div>
               <div class="rounded-text">Not Assessed</div>`;
                     tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>';
                 }
+                // Reset target rating if obs changes
+                tgtSelect.value = "";
+                tgtRating.innerHTML = `
+              <div class="star-rating">${'&#9734;'.repeat(5)}</div>
+              <div class="rounded-text">Not Assessed</div>`;
             });
 
-            // Improvement Plan Column
-            const tgtCol = document.createElement("div");
-            tgtCol.className = "column";
-            const tgtSelect = document.createElement("select");
-            tgtSelect.innerHTML = '<option value="">Target Maturity Level</option>';
-            const tgtRating = document.createElement("div");
-            tgtRating.innerHTML = `
-          <div class="star-rating">${'&#9734;'.repeat(5)}</div>
-          <div class="rounded-text">Not Assessed</div>`;
-            const tgtNarrative = document.createElement("div");
-            tgtNarrative.innerHTML = `
-          <label class="narrative-label">Improvement Plan Narrative:</label>
-          <div class="narrative-input" contenteditable="true"></div>
-        `;
-
             tgtSelect.addEventListener("change", () => {
-                const selected = levels.find(l => l.Score == tgtSelect.value);
+                const selected = levels.find(l => l.score == tgtSelect.value);
                 if (selected) {
                     tgtRating.innerHTML = `
-              <div class="star-rating">${'&#9733;'.repeat(selected.Score)}${'&#9734;'.repeat(5 - selected.Score)}</div>
-              <div class="rounded-text">${selected["Maturity Level"]}</div>`;
+              <div class="star-rating">${'&#9733;'.repeat(selected.score)}${'&#9734;'.repeat(5 - selected.score)}</div>
+              <div class="rounded-text">${selected["level_name"]}</div>`;
                 } else {
                     tgtRating.innerHTML = `
               <div class="star-rating">${'&#9734;'.repeat(5)}</div>
@@ -211,8 +234,8 @@
                 }
             });
 
-            obsCol.append(obsSelect, obsRating,obsNarrative);
-            tgtCol.append(tgtSelect, tgtRating, tgtNarrative);
+            obsCol.append(obsHorizontal, obsNarrative);
+            tgtCol.append(tgtHorizontal, tgtNarrative);
             row.append(obsCol, tgtCol);
 
             card.append(header, row);
