@@ -12,6 +12,8 @@ RUN pip install -r requirements.txt
 COPY src/backend/ ./backend/
 COPY src/frontend/ ./frontend/
 
+COPY .env ./.env
+
 # Expose port
 EXPOSE 5000
 
