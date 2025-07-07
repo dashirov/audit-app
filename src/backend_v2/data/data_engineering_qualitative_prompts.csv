@@ -1,0 +1,394 @@
+practice,area,capability,prompt
+Data Engineering,Data Ingestion,Ingestion Framework & Architecture,"What technologies and tools are used for data ingestion (e.g., Airbyte, Fivetran, Kafka, AWS Glue, custom pipelines)?"
+Data Engineering,Data Ingestion,Ingestion Framework & Architecture,Do you follow a unified architecture or framework for ingesting data across the organization?
+Data Engineering,Data Ingestion,Ingestion Framework & Architecture,Are batch and real-time ingestion methods both supported and documented?
+Data Engineering,Data Ingestion,Data Source Coverage,How many of your critical source systems are integrated into the data platform?
+Data Engineering,Data Ingestion,Data Source Coverage,"Are third-party SaaS sources (e.g., Salesforce, HubSpot, Braze) and internal systems both supported?"
+Data Engineering,Data Ingestion,Data Source Coverage,How do you handle legacy or non-standard systems?
+Data Engineering,Data Ingestion,Change Data Capture (CDC) & Incremental Load,Do you support incremental or CDC-based ingestion for high-volume tables?
+Data Engineering,Data Ingestion,Change Data Capture (CDC) & Incremental Load,What methods do you use to detect and manage schema changes in source systems?
+Data Engineering,Data Ingestion,Change Data Capture (CDC) & Incremental Load,Are full-refresh processes still used regularly for large datasets?
+Data Engineering,Data Ingestion,"Monitoring, Alerting, and Failure Recovery","Do you have monitoring in place for ingestion job failures, delays, and data volume anomalies?"
+Data Engineering,Data Ingestion,"Monitoring, Alerting, and Failure Recovery","Are ingestion pipelines equipped with retry logic, checkpoints, or failover mechanisms?"
+Data Engineering,Data Ingestion,"Monitoring, Alerting, and Failure Recovery",How quickly can ingestion issues be detected and resolved?
+Data Engineering,Data Ingestion,Data Validation & Quality Checks,"Is validation (e.g., row counts, schema matching, null detection) part of the ingestion workflow?"
+Data Engineering,Data Ingestion,Data Validation & Quality Checks,"Are rejected records logged, quarantined, or rerouted for review?"
+Data Engineering,Data Ingestion,Data Validation & Quality Checks,Is there a process for measuring completeness and freshness of ingested data?
+Data Engineering,Data Ingestion,"Metadata, Lineage, and Documentation","Are ingested datasets automatically cataloged with metadata (e.g., source system, last updated)?"
+Data Engineering,Data Ingestion,"Metadata, Lineage, and Documentation",Can you trace which ingestion pipeline brought a dataset in and when?
+Data Engineering,Data Ingestion,"Metadata, Lineage, and Documentation","Is ingestion documentation (e.g., source-to-target mappings) maintained and accessible?"
+Data Engineering,Data Ingestion,Security and Compliance,Are access credentials and sensitive configurations for source systems securely managed?
+Data Engineering,Data Ingestion,Security and Compliance,"Is PII data handled appropriately during ingestion (e.g., masked, encrypted)?"
+Data Engineering,Data Ingestion,Security and Compliance,"Are compliance requirements (e.g., GDPR, HIPAA) integrated into the ingestion process?"
+Data Engineering,Data Ingestion,Operational Maturity,"Who owns and maintains ingestion pipelines—central platform team, domain teams, or both?"
+Data Engineering,Data Ingestion,Operational Maturity,"Is ingestion configuration stored in version-controlled infrastructure (e.g., YAML, Terraform)?"
+Data Engineering,Data Ingestion,Operational Maturity,"Can new ingestion sources be onboarded quickly (within days, hours)?"
+Data Engineering,Data Storage & Warehousing,Architecture & Design,"What storage systems and data warehouses are in use (e.g., Snowflake, BigQuery, Redshift, Databricks, S3, Lakehouse)?"
+Data Engineering,Data Storage & Warehousing,Architecture & Design,Is there a centralized or federated data architecture in place?
+Data Engineering,Data Storage & Warehousing,Architecture & Design,"How are raw, curated, and modeled datasets separated or layered?"
+Data Engineering,Data Storage & Warehousing,Schema Management & Data Modeling,"Do you use a consistent data modeling methodology (e.g., star schema, Data Vault, third normal form)?"
+Data Engineering,Data Storage & Warehousing,Schema Management & Data Modeling,"How are schemas designed, versioned, and managed over time?"
+Data Engineering,Data Storage & Warehousing,Schema Management & Data Modeling,Is schema documentation up to date and accessible?
+Data Engineering,Data Storage & Warehousing,"Data Partitioning, Clustering & Indexing","Do you use partitioning, clustering, or materialized views to optimize performance?"
+Data Engineering,Data Storage & Warehousing,"Data Partitioning, Clustering & Indexing",How are large datasets structured to support high-performance queries?
+Data Engineering,Data Storage & Warehousing,Storage Scalability & Cost Optimization,How is storage growth managed and monitored?
+Data Engineering,Data Storage & Warehousing,Storage Scalability & Cost Optimization,"Are there practices in place for managing cold, hot, and archived data?"
+Data Engineering,Data Storage & Warehousing,Storage Scalability & Cost Optimization,How do you optimize costs across storage tiers or warehouse compute?
+Data Engineering,Data Storage & Warehousing,Data Access & Permissions,How is access to data controlled and audited?
+Data Engineering,Data Storage & Warehousing,Data Access & Permissions,"Are there policies for granting fine-grained access (e.g., row/column level security)?"
+Data Engineering,Data Storage & Warehousing,Data Access & Permissions,Do non-technical users have controlled access to curated data?
+Data Engineering,Data Storage & Warehousing,Data Lineage & Documentation,Can users trace where data in a table came from (upstream sources and transformations)?
+Data Engineering,Data Storage & Warehousing,Data Lineage & Documentation,"Are lineage tools (e.g., dbt, Amundsen, Marquez) used to track data flow?"
+Data Engineering,Data Storage & Warehousing,Data Lineage & Documentation,"Is data documentation (definitions, descriptions) available and up to date?"
+Data Engineering,Data Storage & Warehousing,Reliability & SLAs,Do you have SLAs for dataset freshness and availability?
+Data Engineering,Data Storage & Warehousing,Reliability & SLAs,What happens when pipelines fail—how is data completeness ensured?
+Data Engineering,Data Storage & Warehousing,Reliability & SLAs,Is data validation performed before making tables queryable?
+Data Engineering,Data Storage & Warehousing,Environment Management & CI/CD,"Are there separate dev, staging, and prod environments for your warehouse or data lake?"
+Data Engineering,Data Storage & Warehousing,Environment Management & CI/CD,How are changes to storage objects and models tested and deployed?
+Data Engineering,Data Storage & Warehousing,Environment Management & CI/CD,Do you use infrastructure-as-code or CI/CD for warehouse configuration?
+Data Engineering,Data Storage & Warehousing,Tooling & Observability,"What monitoring tools (e.g., Monte Carlo, DataDog, dbt tests) do you use for data quality and availability?"
+Data Engineering,Data Storage & Warehousing,Tooling & Observability,Can you quickly detect and resolve anomalies in storage or warehouse behavior?
+Data Engineering,Data Storage & Warehousing,Governance & Compliance,Are PII or sensitive datasets tagged and secured appropriately?
+Data Engineering,Data Storage & Warehousing,Governance & Compliance,"How are compliance requirements (e.g., GDPR, HIPAA) implemented in your warehouse?"
+Data Engineering,Data Storage & Warehousing,Governance & Compliance,Is data retention and purging handled automatically or manually?
+Data Engineering,Data Quality & Governance,Data Quality Monitoring,How is data quality monitored across your pipelines and datasets?
+Data Engineering,Data Quality & Governance,Data Quality Monitoring,"Do you use automated checks for nulls, duplicates, outliers, or referential integrity?"
+Data Engineering,Data Quality & Governance,Data Quality Monitoring,"What happens when a quality check fails — is there alerting, remediation, or escalation?"
+Data Engineering,Data Quality & Governance,Data Validation & Testing,"Are validations implemented during ingestion, transformation, or both?"
+Data Engineering,Data Quality & Governance,Data Validation & Testing,"Do you use data unit tests, assertions, or schema enforcement tools (e.g., dbt tests, Great Expectations)?"
+Data Engineering,Data Quality & Governance,Data Validation & Testing,Is test coverage consistent across all business-critical datasets?
+Data Engineering,Data Quality & Governance,Ownership & Stewardship,Who is responsible for ensuring data quality for specific domains or tables?
+Data Engineering,Data Quality & Governance,Ownership & Stewardship,Is there a defined data owner or steward for each major dataset?
+Data Engineering,Data Quality & Governance,Ownership & Stewardship,"How are data issues reported, tracked, and resolved?"
+Data Engineering,Data Quality & Governance,Data Cataloging & Discoverability,"Do you maintain a centralized data catalog (e.g., Atlan, Alation, DataHub, Amundsen)?"
+Data Engineering,Data Quality & Governance,Data Cataloging & Discoverability,"Are metadata (e.g., table descriptions, column definitions, freshness) consistently documented?"
+Data Engineering,Data Quality & Governance,Data Cataloging & Discoverability,Can analysts or other stakeholders discover and understand data independently?
+Data Engineering,Data Quality & Governance,Data Lineage,"Can you trace where a specific column or metric originated from, including upstream sources and transformations?"
+Data Engineering,Data Quality & Governance,Data Lineage,"Do you track lineage at the table level, column level, or both?"
+Data Engineering,Data Quality & Governance,Data Lineage,"Is lineage exposed in a visual, accessible way to users?"
+Data Engineering,Data Quality & Governance,Master & Reference Data Management,"Are there single sources of truth for key entities (e.g., customer, product)?"
+Data Engineering,Data Quality & Governance,Master & Reference Data Management,How is reference data standardized and maintained across systems?
+Data Engineering,Data Quality & Governance,Master & Reference Data Management,Is reference data versioned and auditable?
+Data Engineering,Data Quality & Governance,Access Control & Data Classification,"How is access to sensitive data (e.g., PII, PHI) governed?"
+Data Engineering,Data Quality & Governance,Access Control & Data Classification,"Are datasets classified by sensitivity level (e.g., public, internal, confidential)?"
+Data Engineering,Data Quality & Governance,Access Control & Data Classification,"Are there automated policies for masking, encryption, or row-level access control?"
+Data Engineering,Data Quality & Governance,Policy Enforcement & Compliance,"Are data governance policies (e.g., retention, usage, data sharing) defined and enforced?"
+Data Engineering,Data Quality & Governance,Policy Enforcement & Compliance,"Do you track compliance with frameworks such as GDPR, HIPAA, or CCPA?"
+Data Engineering,Data Quality & Governance,Policy Enforcement & Compliance,Are users required to accept data usage terms before accessing certain datasets?
+Data Engineering,Data Quality & Governance,Change Management & Data Contracts,"Are there procedures in place for proposing, reviewing, and approving changes to key data models?"
+Data Engineering,Data Quality & Governance,Change Management & Data Contracts,Do producers of data define data contracts or SLAs with consumers?
+Data Engineering,Data Quality & Governance,Change Management & Data Contracts,How are breaking changes communicated and tracked?
+Data Engineering,Data Quality & Governance,Incident Management & Root Cause Analysis,"How do you detect and respond to data incidents (e.g., missing records, corruption, pipeline failure)?"
+Data Engineering,Data Quality & Governance,Incident Management & Root Cause Analysis,Is there an RCA process and issue history for recurring data problems?
+Data Engineering,Data Quality & Governance,Incident Management & Root Cause Analysis,How long does it typically take to detect and resolve a critical data quality issue?
+Data Engineering,Data Modeling & Schema Design,Modeling Approach & Standards,"What modeling paradigm(s) does your team use (e.g., star schema, snowflake schema, Data Vault, wide tables)?"
+Data Engineering,Data Modeling & Schema Design,Modeling Approach & Standards,Are modeling standards documented and enforced across teams?
+Data Engineering,Data Modeling & Schema Design,Modeling Approach & Standards,How often are models reviewed or refactored?
+Data Engineering,Data Modeling & Schema Design,Semantic Consistency,"Do business terms (e.g., “Active User”, “Churned Customer”) have consistent definitions across teams?"
+Data Engineering,Data Modeling & Schema Design,Semantic Consistency,"How is metric logic (e.g., revenue, conversion rate) standardized and maintained?"
+Data Engineering,Data Modeling & Schema Design,Semantic Consistency,Are semantic definitions accessible to business stakeholders?
+Data Engineering,Data Modeling & Schema Design,Collaboration & Requirements Gathering,How are business requirements gathered before designing a new model?
+Data Engineering,Data Modeling & Schema Design,Collaboration & Requirements Gathering,Are data analysts and business stakeholders involved in schema reviews or validations?
+Data Engineering,Data Modeling & Schema Design,Collaboration & Requirements Gathering,What happens if new business use cases conflict with existing data models?
+Data Engineering,Data Modeling & Schema Design,Model Versioning & Change Management,"Are changes to models (e.g., new columns, renamed fields) version-controlled?"
+Data Engineering,Data Modeling & Schema Design,Model Versioning & Change Management,How are downstream dependencies managed when schemas change?
+Data Engineering,Data Modeling & Schema Design,Model Versioning & Change Management,Can you roll back a model or deployment if something breaks?
+Data Engineering,Data Modeling & Schema Design,Documentation & Discoverability,"Are models and schemas documented (e.g., table/column descriptions, lineage)?"
+Data Engineering,Data Modeling & Schema Design,Documentation & Discoverability,Is the documentation generated automatically or written manually?
+Data Engineering,Data Modeling & Schema Design,Documentation & Discoverability,Can downstream teams easily discover what data is available and how to use it?
+Data Engineering,Data Modeling & Schema Design,Data Contracts & Schema Enforcement,Are there agreements (data contracts) between producers and consumers of modeled data?
+Data Engineering,Data Modeling & Schema Design,Data Contracts & Schema Enforcement,"How are schema violations handled — is there alerting, blocking, or auto-repair?"
+Data Engineering,Data Modeling & Schema Design,Data Contracts & Schema Enforcement,Are schema changes tested and validated before deployment?
+Data Engineering,Data Modeling & Schema Design,Normalization vs. Denormalization Tradeoffs,How do you decide when to normalize data vs. denormalize for performance or usability?
+Data Engineering,Data Modeling & Schema Design,Normalization vs. Denormalization Tradeoffs,"Are these trade-offs formalized (e.g., by SLAs, query cost models)?"
+Data Engineering,Data Modeling & Schema Design,Normalization vs. Denormalization Tradeoffs,Do you maintain both raw and modeled views of critical datasets?
+Data Engineering,Data Modeling & Schema Design,Tooling & Frameworks,"What tools are used for data modeling (e.g., dbt, ER/Studio, Lucidchart, in-house tools)?"
+Data Engineering,Data Modeling & Schema Design,Tooling & Frameworks,Is the model code modular and reusable?
+Data Engineering,Data Modeling & Schema Design,Tooling & Frameworks,"How are models integrated with orchestration, testing, and documentation systems?"
+Data Engineering,Data Modeling & Schema Design,Model Testing & Quality,"Are there validation checks (e.g., dbt tests, constraints) to ensure model quality?"
+Data Engineering,Data Modeling & Schema Design,Model Testing & Quality,"How are nulls, duplicates, and outliers addressed in modeled tables?"
+Data Engineering,Data Modeling & Schema Design,Model Testing & Quality,Are you alerted when a model fails a test or doesn’t refresh on time?
+Data Engineering,Data Modeling & Schema Design,Fit for Analytics Use,Do analysts and business users find the models intuitive and performant?
+Data Engineering,Data Modeling & Schema Design,Fit for Analytics Use,"Are metrics and dimensions easy to use in BI tools (Looker, Tableau, etc.)?"
+Data Engineering,Data Modeling & Schema Design,Fit for Analytics Use,How often are modeled tables reused across multiple analytics projects?
+Data Engineering,Metadata Management,Metadata Types & Coverage,"What types of metadata are collected (e.g., technical, business, operational, behavioral)?"
+Data Engineering,Metadata Management,Metadata Types & Coverage,Which data systems currently expose or manage metadata?
+Data Engineering,Metadata Management,Metadata Types & Coverage,"Are lineage, freshness, and data quality metadata tracked for your assets?"
+Data Engineering,Metadata Management,Metadata Collection Process,Is metadata generated automatically or added manually?
+Data Engineering,Metadata Management,Metadata Collection Process,How frequently is metadata collected or refreshed?
+Data Engineering,Metadata Management,Metadata Collection Process,Are metadata updates tied to your data pipeline or modeling workflows?
+Data Engineering,Metadata Management,Tooling & Integration,"What tools or platforms (e.g., Atlan, DataHub, Collibra, Alation, Amundsen) are used for managing metadata?"
+Data Engineering,Metadata Management,Tooling & Integration,"Are these tools integrated with your data warehouse, transformation engine (e.g., dbt), or BI layer?"
+Data Engineering,Metadata Management,Tooling & Integration,Can metadata be queried via API or accessed programmatically?
+Data Engineering,Metadata Management,Search & Discovery,"Can analysts or engineers search metadata to find data assets (e.g., tables, metrics, dashboards)?"
+Data Engineering,Metadata Management,Search & Discovery,Is there a centralized catalog or interface for discovering metadata?
+Data Engineering,Metadata Management,Search & Discovery,How intuitive and complete is the metadata when someone looks for a dataset?
+Data Engineering,Metadata Management,Documentation Quality,Are table and column-level descriptions consistently maintained?
+Data Engineering,Metadata Management,Documentation Quality,Do metrics or KPIs include business context and calculation logic?
+Data Engineering,Metadata Management,Documentation Quality,"Are owners, refresh cadences, and SLAs documented for critical data assets?"
+Data Engineering,Metadata Management,Lineage Visibility,Can you trace lineage from source to report (or vice versa) across systems?
+Data Engineering,Metadata Management,Lineage Visibility,Is lineage tracked at table level? Column level?
+Data Engineering,Metadata Management,Lineage Visibility,How is lineage visualized and maintained?
+Data Engineering,Metadata Management,Stewardship & Ownership,Are metadata stewards assigned to data domains or platforms?
+Data Engineering,Metadata Management,Stewardship & Ownership,Who is responsible for updating and curating metadata?
+Data Engineering,Metadata Management,Stewardship & Ownership,Is metadata maintenance a tracked responsibility with SLAs?
+Data Engineering,Metadata Management,Governance & Policies,Are there documented policies around metadata completeness or accuracy?
+Data Engineering,Metadata Management,Governance & Policies,Do you have metadata quality KPIs or audits?
+Data Engineering,Metadata Management,Governance & Policies,"How do you handle stale, redundant, or conflicting metadata?"
+Data Engineering,Metadata Management,Security & Access,Is access to metadata itself controlled by role or sensitivity?
+Data Engineering,Metadata Management,Security & Access,Can users see metadata about data they cannot query?
+Data Engineering,Metadata Management,Security & Access,"Are sensitive attributes or classifications (e.g., PII, HIPAA) visible in metadata?"
+Data Engineering,Metadata Management,Metadata Use in Automation,"Is metadata used to automate data validation, lineage tracking, or alerting?"
+Data Engineering,Metadata Management,Metadata Use in Automation,"Do orchestration tools dynamically adapt using metadata (e.g., dbt or Airflow DAG generation)?"
+Data Engineering,Metadata Management,Metadata Use in Automation,How does metadata enable self-service or impact downstream processes?
+Data Engineering,Data Security & Privacy,Access Control & Authorization,How is access to sensitive data controlled across your environments?
+Data Engineering,Data Security & Privacy,Access Control & Authorization,Are access policies role-based (RBAC) or attribute-based (ABAC)?
+Data Engineering,Data Security & Privacy,Access Control & Authorization,How often are access controls reviewed or audited?
+Data Engineering,Data Security & Privacy,Data Classification & Sensitivity Tagging,"Do you classify data (e.g., PII, financial, health, internal, public)?"
+Data Engineering,Data Security & Privacy,Data Classification & Sensitivity Tagging,Is classification automated or manually assigned?
+Data Engineering,Data Security & Privacy,Data Classification & Sensitivity Tagging,How is classification used in access control or reporting?
+Data Engineering,Data Security & Privacy,"Data Masking, Encryption, & Tokenization",Is sensitive data encrypted at rest and in transit?
+Data Engineering,Data Security & Privacy,"Data Masking, Encryption, & Tokenization","Do you use masking, redaction, or tokenization to protect data during processing?"
+Data Engineering,Data Security & Privacy,"Data Masking, Encryption, & Tokenization",Are keys and secrets managed via a secure vault or KMS?
+Data Engineering,Data Security & Privacy,Audit Logging & Monitoring,Are data access logs collected and monitored for anomalies?
+Data Engineering,Data Security & Privacy,Audit Logging & Monitoring,Can you trace who accessed which datasets and when?
+Data Engineering,Data Security & Privacy,Audit Logging & Monitoring,Do you perform regular audits or threat detection on logs?
+Data Engineering,Data Security & Privacy,Privacy by Design,Are privacy requirements considered during data pipeline or product design?
+Data Engineering,Data Security & Privacy,Privacy by Design,Do you support data minimization and purpose limitation principles?
+Data Engineering,Data Security & Privacy,Privacy by Design,Are developers and engineers trained in privacy-aware development?
+Data Engineering,Data Security & Privacy,Data Subject Rights & Consent,"Can your platform support deletion, rectification, and data export requests?"
+Data Engineering,Data Security & Privacy,Data Subject Rights & Consent,How are user consents for data collection tracked and enforced?
+Data Engineering,Data Security & Privacy,Data Subject Rights & Consent,Is there a self-service interface for data subject rights?
+Data Engineering,Data Security & Privacy,Vendor & Third-Party Risk,How is data shared with third parties or vendors?
+Data Engineering,Data Security & Privacy,Vendor & Third-Party Risk,"Are contracts in place to ensure downstream data protection (e.g., DPAs)?"
+Data Engineering,Data Security & Privacy,Vendor & Third-Party Risk,Are vendors required to meet specific security certifications?
+Data Engineering,Data Security & Privacy,Secure Development & Deployment,Are code and infrastructure changes reviewed for security risks?
+Data Engineering,Data Security & Privacy,Secure Development & Deployment,"Do you use secrets scanning or SAST tools (e.g., Trivy, Snyk)?"
+Data Engineering,Data Security & Privacy,Secure Development & Deployment,Are container images or infrastructure-as-code components regularly patched?
+Data Engineering,Data Security & Privacy,Incident Response & Breach Handling,Do you have a documented process for handling data security incidents?
+Data Engineering,Data Security & Privacy,Incident Response & Breach Handling,How are users or regulators notified in the event of a breach?
+Data Engineering,Data Security & Privacy,Incident Response & Breach Handling,Is there a post-mortem process with lessons learned?
+Data Engineering,Data Security & Privacy,Regulatory Compliance & Readiness,"Which privacy regulations apply to your organization (e.g., GDPR, CCPA, HIPAA)?"
+Data Engineering,Data Security & Privacy,Regulatory Compliance & Readiness,Do you regularly assess compliance posture?
+Data Engineering,Data Security & Privacy,Regulatory Compliance & Readiness,"Who is accountable for privacy compliance (e.g., DPO, security officer)?"
+Data Engineering,Performance Optimization,Pipeline & Job Performance,How do you monitor the runtime performance of your ETL/ELT jobs?
+Data Engineering,Performance Optimization,Pipeline & Job Performance,Are slow or long-running pipelines regularly identified and improved?
+Data Engineering,Performance Optimization,Pipeline & Job Performance,Do you benchmark and tune ingestion or transformation processes?
+Data Engineering,Performance Optimization,Query Performance,Are queries regularly profiled and optimized in your data warehouse or lake?
+Data Engineering,Performance Optimization,Query Performance,"What tooling or techniques are used to monitor and improve SQL performance (e.g., query plans, clustering)?"
+Data Engineering,Performance Optimization,Query Performance,"How is performance optimization prioritized (e.g., cost-based, latency, business criticality)?"
+Data Engineering,Performance Optimization,Data Partitioning & Indexing,Are datasets partitioned or clustered to improve query performance?
+Data Engineering,Performance Optimization,Data Partitioning & Indexing,How do you decide on partitioning strategies for large fact tables or logs?
+Data Engineering,Performance Optimization,Data Partitioning & Indexing,"Are indexes maintained, pruned, or rebuilt as data evolves?"
+Data Engineering,Performance Optimization,Materializations & Caching,"Are materialized views, summary tables, or result caches used to reduce runtime costs?"
+Data Engineering,Performance Optimization,Materializations & Caching,How do you manage cache invalidation and refresh policies?
+Data Engineering,Performance Optimization,Materializations & Caching,Are downstream consumers aware of and aligned with caching strategies?
+Data Engineering,Performance Optimization,Data Volumes & Growth Planning,How do you track and anticipate growth in data volumes?
+Data Engineering,Performance Optimization,Data Volumes & Growth Planning,Are historical or high-granularity datasets archived or downsampled for performance?
+Data Engineering,Performance Optimization,Data Volumes & Growth Planning,Do pipelines or dashboards degrade with data volume increases?
+Data Engineering,Performance Optimization,Resource Utilization,How is compute resource usage monitored and managed?
+Data Engineering,Performance Optimization,Resource Utilization,"Are jobs scheduled to avoid contention (e.g., in Airflow, dbt, Databricks)?"
+Data Engineering,Performance Optimization,Resource Utilization,"Are costs and performance correlated with warehouse size, instance type, or concurrency?"
+Data Engineering,Performance Optimization,Performance Testing & Benchmarks,Are performance benchmarks or SLAs defined for pipelines or queries?
+Data Engineering,Performance Optimization,Performance Testing & Benchmarks,Do you have test environments to simulate production-scale performance?
+Data Engineering,Performance Optimization,Performance Testing & Benchmarks,"How do you validate changes before deploying to production (e.g., canary tests)?"
+Data Engineering,Performance Optimization,Observability & Alerting,"What tools are used for monitoring job durations, failure rates, and throughput?"
+Data Engineering,Performance Optimization,Observability & Alerting,Are there alerts for performance regressions or unexpected spikes?
+Data Engineering,Performance Optimization,Observability & Alerting,Is there a dashboard for data pipeline health and performance KPIs?
+Data Engineering,Performance Optimization,Optimization Ownership,Who is responsible for identifying and addressing performance bottlenecks?
+Data Engineering,Performance Optimization,Optimization Ownership,"Do teams proactively tune performance, or is it reactive to user complaints?"
+Data Engineering,Performance Optimization,Optimization Ownership,Are optimization efforts tracked or incentivized?
+Data Engineering,Performance Optimization,Feedback & Iteration,"Do end-users provide feedback on dashboard, pipeline, or query speed?"
+Data Engineering,Performance Optimization,Feedback & Iteration,"Are there SLAs or expectations around performance (e.g., report load time < 5s)?"
+Data Engineering,Performance Optimization,Feedback & Iteration,Is feedback looped back into engineering for ongoing tuning?
+Data Engineering,Scalability & Infrastructure,Elasticity & Auto-Scaling,How does your data infrastructure scale with increases in data volume or user demand?
+Data Engineering,Scalability & Infrastructure,Elasticity & Auto-Scaling,Are compute and storage layers auto-scaled or manually provisioned?
+Data Engineering,Scalability & Infrastructure,Elasticity & Auto-Scaling,"How often are infrastructure limits reached, and how are they resolved?"
+Data Engineering,Scalability & Infrastructure,Modular & Decoupled Architecture,"Is your pipeline architecture modular, with clearly defined stages or services?"
+Data Engineering,Scalability & Infrastructure,Modular & Decoupled Architecture,"Are components loosely coupled (e.g., message queues, event-driven) to support scaling?"
+Data Engineering,Scalability & Infrastructure,Modular & Decoupled Architecture,Can parts of the pipeline be scaled independently?
+Data Engineering,Scalability & Infrastructure,Multi-Environment & Deployment Management,"Do you maintain separate environments for dev, staging, and production?"
+Data Engineering,Scalability & Infrastructure,Multi-Environment & Deployment Management,How are environments synchronized or cloned for scale testing or validation?
+Data Engineering,Scalability & Infrastructure,Multi-Environment & Deployment Management,Can infrastructure be rapidly duplicated or deployed in new regions?
+Data Engineering,Scalability & Infrastructure,Infrastructure as Code (IaC),"Is your data infrastructure defined and deployed via code (e.g., Terraform, Pulumi)?"
+Data Engineering,Scalability & Infrastructure,Infrastructure as Code (IaC),Can environments be rebuilt reproducibly with minimal manual steps?
+Data Engineering,Scalability & Infrastructure,Infrastructure as Code (IaC),Are IaC changes version-controlled and peer-reviewed?
+Data Engineering,Scalability & Infrastructure,Cloud-Native & Vendor Lock-In,"Is your platform designed to be cloud-native, multi-cloud, or hybrid?"
+Data Engineering,Scalability & Infrastructure,Cloud-Native & Vendor Lock-In,"How dependent are you on vendor-specific features (e.g., BigQuery UDFs, Snowflake Tasks)?"
+Data Engineering,Scalability & Infrastructure,Cloud-Native & Vendor Lock-In,Could your stack be ported or migrated without major reengineering?
+Data Engineering,Scalability & Infrastructure,Data Throughput & Latency Handling,What’s the typical end-to-end latency of your data pipelines?
+Data Engineering,Scalability & Infrastructure,Data Throughput & Latency Handling,Can your system handle sudden surges in data ingestion or queries?
+Data Engineering,Scalability & Infrastructure,Data Throughput & Latency Handling,How do you test for high-throughput scenarios?
+Data Engineering,Scalability & Infrastructure,Resource & Cost Optimization at Scale,How do you monitor cost-efficiency across scaled workloads?
+Data Engineering,Scalability & Infrastructure,Resource & Cost Optimization at Scale,"Do you track cost per job, per user, or per query?"
+Data Engineering,Scalability & Infrastructure,Resource & Cost Optimization at Scale,Are there practices in place to prevent cost overruns due to scaling?
+Data Engineering,Scalability & Infrastructure,High Availability (HA) & Fault Tolerance,Is your infrastructure built with redundancy and failover capabilities?
+Data Engineering,Scalability & Infrastructure,High Availability (HA) & Fault Tolerance,How quickly can pipelines or services recover after a crash?
+Data Engineering,Scalability & Infrastructure,High Availability (HA) & Fault Tolerance,Have you defined SLOs or RTO/RPO for critical infrastructure?
+Data Engineering,Scalability & Infrastructure,Global & Multi-Tenant Support,"Can your stack support multiple teams, tenants, or geographic regions simultaneously?"
+Data Engineering,Scalability & Infrastructure,Global & Multi-Tenant Support,"How is resource isolation handled (e.g., per-project compute quotas, separate schemas)?"
+Data Engineering,Scalability & Infrastructure,Global & Multi-Tenant Support,Are there access controls and cost attribution per tenant/team?
+Data Engineering,Scalability & Infrastructure,Scalability Testing & Planning,How do you assess whether the platform can support future growth?
+Data Engineering,Scalability & Infrastructure,Scalability Testing & Planning,"Are there tools or simulations used to test load, concurrency, or regional expansion?"
+Data Engineering,Scalability & Infrastructure,Scalability Testing & Planning,How frequently is scalability re-evaluated in architecture reviews?
+Data Engineering,Automation & Workflow Orchestration,Workflow Orchestration Framework,"What tools or frameworks (e.g., Airflow, Prefect, Dagster, dbt Cloud, Luigi) are used to orchestrate data pipelines?"
+Data Engineering,Automation & Workflow Orchestration,Workflow Orchestration Framework,How are dependencies between jobs defined and managed?
+Data Engineering,Automation & Workflow Orchestration,Workflow Orchestration Framework,Are workflows versioned and reusable across projects?
+Data Engineering,Automation & Workflow Orchestration,Triggering & Scheduling,"How are data workflows triggered — on schedule, by events, or manually?"
+Data Engineering,Automation & Workflow Orchestration,Triggering & Scheduling,"Do you support dynamic triggering (e.g., based on file arrival, API calls, upstream pipeline completion)?"
+Data Engineering,Automation & Workflow Orchestration,Triggering & Scheduling,"How are schedules defined, monitored, and adjusted?"
+Data Engineering,Automation & Workflow Orchestration,Monitoring & Alerting,How do you monitor the success or failure of orchestrated jobs?
+Data Engineering,Automation & Workflow Orchestration,Monitoring & Alerting,"Are alerts configured for delays, failures, or SLA breaches?"
+Data Engineering,Automation & Workflow Orchestration,Monitoring & Alerting,Who receives alerts and how are they escalated?
+Data Engineering,Automation & Workflow Orchestration,Failure Handling & Retries,What happens when a workflow step fails?
+Data Engineering,Automation & Workflow Orchestration,Failure Handling & Retries,"Are retry policies in place for transient issues (e.g., network glitches)?"
+Data Engineering,Automation & Workflow Orchestration,Failure Handling & Retries,"Can failed workflows resume from point-of-failure, or do they restart entirely?"
+Data Engineering,Automation & Workflow Orchestration,Parameterization & Reusability,"Can jobs or workflows be reused across environments, teams, or clients via parameterization?"
+Data Engineering,Automation & Workflow Orchestration,Parameterization & Reusability,Are config-driven or templated workflows common in your orchestration logic?
+Data Engineering,Automation & Workflow Orchestration,Parameterization & Reusability,"Do you use macros, dynamic DAGs, or modular task definitions?"
+Data Engineering,Automation & Workflow Orchestration,Workflow Documentation & Discoverability,How are workflows documented and shared across teams?
+Data Engineering,Automation & Workflow Orchestration,Workflow Documentation & Discoverability,Can others understand what a pipeline does without reading source code?
+Data Engineering,Automation & Workflow Orchestration,Workflow Documentation & Discoverability,Are data lineage and workflow diagrams available and kept up to date?
+Data Engineering,Automation & Workflow Orchestration,Secrets & Credential Management,"How are secrets (API keys, DB credentials) managed in workflow orchestration tools?"
+Data Engineering,Automation & Workflow Orchestration,Secrets & Credential Management,"Do you use vaults, cloud secret managers, or environment injection?"
+Data Engineering,Automation & Workflow Orchestration,Secrets & Credential Management,Are credentials rotated and audit-logged?
+Data Engineering,Automation & Workflow Orchestration,Idempotency & State Management,"Are your jobs designed to be idempotent (i.e., safe to re-run)?"
+Data Engineering,Automation & Workflow Orchestration,Idempotency & State Management,How is job state tracked between runs?
+Data Engineering,Automation & Workflow Orchestration,Idempotency & State Management,Do you maintain metadata for incremental loads or stateful retries?
+Data Engineering,Automation & Workflow Orchestration,Multi-Tenant / Multi-Team Usage,"Are workflows organized per team, domain, or business unit?"
+Data Engineering,Automation & Workflow Orchestration,Multi-Tenant / Multi-Team Usage,How is access to workflows and DAGs controlled across teams?
+Data Engineering,Automation & Workflow Orchestration,Multi-Tenant / Multi-Team Usage,Can teams build and deploy workflows independently?
+Data Engineering,Automation & Workflow Orchestration,DevOps Integration,Are workflow changes peer-reviewed and deployed via CI/CD?
+Data Engineering,Automation & Workflow Orchestration,DevOps Integration,How are changes to orchestration logic validated before production deployment?
+Data Engineering,Automation & Workflow Orchestration,DevOps Integration,Do engineers test workflows in isolated environments?
+Data Engineering,Observability & Monitoring,Pipeline Health Monitoring,How do you monitor the status and success/failure of your data pipelines?
+Data Engineering,Observability & Monitoring,Pipeline Health Monitoring,"Do you track execution duration, data volume processed, and error rates per pipeline?"
+Data Engineering,Observability & Monitoring,Pipeline Health Monitoring,"How is monitoring implemented across batch, streaming, and real-time jobs?"
+Data Engineering,Observability & Monitoring,Data Quality Monitoring,"Are there automatic checks for data quality (e.g., null rates, schema changes, outliers)?"
+Data Engineering,Observability & Monitoring,Data Quality Monitoring,How are upstream data quality issues detected and communicated to downstream teams?
+Data Engineering,Observability & Monitoring,Data Quality Monitoring,"Are anomaly detection tools or data validation frameworks (e.g., Great Expectations, dbt tests) in use?"
+Data Engineering,Observability & Monitoring,Infrastructure & Resource Monitoring,"Do you monitor CPU, memory, storage, and I/O for data infrastructure components?"
+Data Engineering,Observability & Monitoring,Infrastructure & Resource Monitoring,"How do you detect and resolve system-level bottlenecks (e.g., cluster overutilization)?"
+Data Engineering,Observability & Monitoring,Infrastructure & Resource Monitoring,"Are thresholds, alerts, or auto-scaling rules defined for infrastructure metrics?"
+Data Engineering,Observability & Monitoring,Logging Practices,"What logging tools (e.g., CloudWatch, ELK, Datadog) do you use?"
+Data Engineering,Observability & Monitoring,Logging Practices,"Are logs structured, queryable, and enriched with context (e.g., job ID, tenant)?"
+Data Engineering,Observability & Monitoring,Logging Practices,"Who reviews logs, and how often?"
+Data Engineering,Observability & Monitoring,Alerting & Escalation,"What types of alerts do you receive (pipeline failures, performance degradation, data anomalies)?"
+Data Engineering,Observability & Monitoring,Alerting & Escalation,"Who gets notified and how (Slack, PagerDuty, email)?"
+Data Engineering,Observability & Monitoring,Alerting & Escalation,Is there a defined escalation path or on-call rotation?
+Data Engineering,Observability & Monitoring,End-to-End Lineage Visibility,"Can you trace the flow of data from source to consumption (e.g., ingestion → transformation → reporting)?"
+Data Engineering,Observability & Monitoring,End-to-End Lineage Visibility,Is lineage tracked automatically or manually maintained?
+Data Engineering,Observability & Monitoring,End-to-End Lineage Visibility,Is data lineage used to debug incidents or understand impact?
+Data Engineering,Observability & Monitoring,Dashboards & Observability Tools,Are there centralized dashboards that show system health and data freshness?
+Data Engineering,Observability & Monitoring,Dashboards & Observability Tools,"What observability tools (e.g., Grafana, Monte Carlo, OpenTelemetry) are used?"
+Data Engineering,Observability & Monitoring,Dashboards & Observability Tools,Can stakeholders (non-engineers) access and understand data availability status?
+Data Engineering,Observability & Monitoring,SLAs & SLOs,"Are SLAs defined for data freshness, availability, or uptime?"
+Data Engineering,Observability & Monitoring,SLAs & SLOs,"How are SLA breaches tracked, reported, and remediated?"
+Data Engineering,Observability & Monitoring,SLAs & SLOs,Is SLA performance used as a KPI for engineering or business reporting?
+Data Engineering,Observability & Monitoring,Incident Management,"How are incidents tracked and triaged (e.g., ticketing systems, postmortems)?"
+Data Engineering,Observability & Monitoring,Incident Management,Do you perform root cause analysis (RCA) and track time-to-resolution?
+Data Engineering,Observability & Monitoring,Incident Management,How often do recurring monitoring failures or false positives occur?
+Data Engineering,Observability & Monitoring,Proactive Monitoring & Anomaly Detection,Are monitoring tools configured to proactively detect anomalies?
+Data Engineering,Observability & Monitoring,Proactive Monitoring & Anomaly Detection,"Do you use ML/AI-based anomaly detection (e.g., sudden drops/spikes in metrics)?"
+Data Engineering,Observability & Monitoring,Proactive Monitoring & Anomaly Detection,Are alerts prioritized by severity or impact?
+Data Engineering,Disaster Recovery & Backup,Backup Coverage,"What data assets (e.g., databases, pipelines, file systems) are backed up regularly?"
+Data Engineering,Disaster Recovery & Backup,Backup Coverage,Are both raw data and transformed outputs included in your backup strategy?
+Data Engineering,Disaster Recovery & Backup,Backup Coverage,"How is metadata (e.g., schema definitions, configurations) backed up?"
+Data Engineering,Disaster Recovery & Backup,Backup Frequency & Retention,"How often are backups taken (e.g., hourly, daily, weekly)?"
+Data Engineering,Disaster Recovery & Backup,Backup Frequency & Retention,What is the data retention policy for backups?
+Data Engineering,Disaster Recovery & Backup,Backup Frequency & Retention,Are backups stored across multiple regions or storage tiers?
+Data Engineering,Disaster Recovery & Backup,Backup Validation & Monitoring,Are backup jobs monitored for completion and correctness?
+Data Engineering,Disaster Recovery & Backup,Backup Validation & Monitoring,How do you verify that backups are not corrupted and are restorable?
+Data Engineering,Disaster Recovery & Backup,Backup Validation & Monitoring,Is there an alerting system for failed or missed backups?
+Data Engineering,Disaster Recovery & Backup,Disaster Recovery Plan,Do you have a documented disaster recovery (DR) plan specific to data systems?
+Data Engineering,Disaster Recovery & Backup,Disaster Recovery Plan,What are your defined RTO (Recovery Time Objective) and RPO (Recovery Point Objective)?
+Data Engineering,Disaster Recovery & Backup,Disaster Recovery Plan,Who is responsible for executing the DR plan?
+Data Engineering,Disaster Recovery & Backup,Recovery Drills & Testing,"How often do you perform recovery testing (e.g., simulating data loss, infrastructure failure)?"
+Data Engineering,Disaster Recovery & Backup,Recovery Drills & Testing,When was the last successful end-to-end recovery test?
+Data Engineering,Disaster Recovery & Backup,Recovery Drills & Testing,What percentage of the environment is tested during these drills?
+Data Engineering,Disaster Recovery & Backup,Infrastructure Resilience,"Are critical systems (e.g., data warehouse, orchestration layer) configured for high availability?"
+Data Engineering,Disaster Recovery & Backup,Infrastructure Resilience,Is failover automatic or manual?
+Data Engineering,Disaster Recovery & Backup,Infrastructure Resilience,Do you use multi-zone or multi-region replication?
+Data Engineering,Disaster Recovery & Backup,Data Versioning & Time Travel,"Do you use tools or databases that support data versioning or time travel (e.g., Snowflake, Delta Lake)?"
+Data Engineering,Disaster Recovery & Backup,Data Versioning & Time Travel,Can you recover data at a specific point in time without full restoration?
+Data Engineering,Disaster Recovery & Backup,Data Versioning & Time Travel,How far back can you look in your historical data snapshots?
+Data Engineering,Disaster Recovery & Backup,Access to Backups,"Who has access to backups, and how is access controlled?"
+Data Engineering,Disaster Recovery & Backup,Access to Backups,Are backup locations encrypted and access-audited?
+Data Engineering,Disaster Recovery & Backup,Access to Backups,"Can backups be restored selectively (e.g., only specific tables or partitions)?"
+Data Engineering,Disaster Recovery & Backup,Third-Party Dependencies,"How do you manage DR for third-party-managed data services (e.g., SaaS pipelines, cloud-native warehouses)?"
+Data Engineering,Disaster Recovery & Backup,Third-Party Dependencies,Are there SLAs in place with these vendors regarding data durability and recovery?
+Data Engineering,Disaster Recovery & Backup,Post-Recovery Validation,"After a restoration or recovery event, how is data integrity validated?"
+Data Engineering,Disaster Recovery & Backup,Post-Recovery Validation,"Are consumers (BI tools, downstream processes) tested post-recovery to ensure completeness?"
+Data Engineering,Disaster Recovery & Backup,Post-Recovery Validation,Do you track and document lessons learned from each recovery?
+Data Engineering,Self-Service & Data Democratization,Data Discoverability & Cataloging,Can business users easily find and understand the datasets available to them?
+Data Engineering,Self-Service & Data Democratization,Data Discoverability & Cataloging,Is there a centralized data catalog or glossary in place?
+Data Engineering,Self-Service & Data Democratization,Data Discoverability & Cataloging,"Are metadata, lineage, and data ownership clearly defined and accessible?"
+Data Engineering,Self-service & Democratization,User Access & Permissions,How are access permissions to data sets granted and managed?
+Data Engineering,Self-service & Democratization,User Access & Permissions,Is there a role-based access control model in place for data usage?
+Data Engineering,Self-service & Democratization,User Access & Permissions,Are users able to request access independently through a defined workflow?
+Data Engineering,Self-service & Democratization,Self-Service Analytics Enablement,"What tools (e.g., Looker, Tableau, Power BI, Sigma) are available for self-service analytics?"
+Data Engineering,Self-service & Democratization,Self-Service Analytics Enablement,Can non-technical users build or modify reports and dashboards on their own?
+Data Engineering,Self-service & Democratization,Self-Service Analytics Enablement,"Do users have access to raw data (e.g., Snowflake, BigQuery) or only curated datasets?"
+Data Engineering,Self-service & Democratization,Data Literacy & Enablement,Are there training programs or onboarding resources to help new users understand the data?
+Data Engineering,Self-service & Democratization,Data Literacy & Enablement,"Do teams publish and maintain documentation on KPIs, definitions, and reporting practices?"
+Data Engineering,Self-service & Democratization,Data Literacy & Enablement,Are data dictionaries and examples of use cases easily accessible?
+Data Engineering,Self-service & Democratization,Data Request Workflow,How often do business users request help from data engineers or analysts for basic queries?
+Data Engineering,Self-service & Democratization,Data Request Workflow,"Is there a structured intake process for data requests (e.g., JIRA, Asana, ticket system)?"
+Data Engineering,Self-service & Democratization,Data Request Workflow,Are frequent requests analyzed to identify opportunities for self-service?
+Data Engineering,Self-service & Democratization,Standardization of Metrics & KPIs,Is there a single source of truth for core KPIs and metrics?
+Data Engineering,Self-service & Democratization,Standardization of Metrics & KPIs,Do different departments calculate the same KPI in different ways?
+Data Engineering,Self-service & Democratization,Standardization of Metrics & KPIs,Are metric definitions documented and accessible from BI tools or data catalogs?
+Data Engineering,Self-service & Democratization,Data Access Governance,"How is compliance ensured for sensitive data exposed in self-service tools (e.g., PII, financials)?"
+Data Engineering,Self-service & Democratization,Data Access Governance,Are data usage logs monitored and audited for anomalies or misuse?
+Data Engineering,Self-service & Democratization,Data Access Governance,Can you trace who accessed what data and when?
+Data Engineering,Self-service & Democratization,Integration with Other Tools,"Are data tools integrated into common workflows (e.g., CRM, marketing platforms, finance systems)?"
+Data Engineering,Self-service & Democratization,Integration with Other Tools,"Can business users export or sync data to their preferred tools (e.g., spreadsheets, Slack)?"
+Data Engineering,Self-service & Democratization,Integration with Other Tools,Is reverse ETL or data activation used to serve data back into operational tools?
+Data Engineering,Self-service & Democratization,Usage Metrics & Feedback,Do you track how often dashboards and data sets are used?
+Data Engineering,Self-service & Democratization,Usage Metrics & Feedback,Is there a process for collecting feedback on self-service tools and data quality?
+Data Engineering,Self-service & Democratization,Usage Metrics & Feedback,Are changes to commonly used datasets communicated clearly to end-users?
+Data Engineering,Integration & APIs,System Interoperability & Connectivity,What systems (internal or external) does your data infrastructure integrate with regularly?
+Data Engineering,Integration & APIs,System Interoperability & Connectivity,Are integrations primarily batch-based or do they support streaming/real-time capabilities?
+Data Engineering,Integration & APIs,System Interoperability & Connectivity,"Are third-party APIs (e.g., for SaaS tools, marketing platforms, CRMs) used in data pipelines? How?"
+Data Engineering,Integration & APIs,API Usage & Design,Are internal APIs available to expose processed data or metrics to other teams or applications?
+Data Engineering,Integration & APIs,API Usage & Design,"Are there standards in place for API development (e.g., REST/GraphQL, naming, authentication)?"
+Data Engineering,Integration & APIs,API Usage & Design,"How do data engineers consume external APIs for data ingestion (e.g., rate limits, retries, error handling)?"
+Data Engineering,Integration & APIs,Data Ingestion from External Systems,"How are external data sources integrated (e.g., vendors, partners, public data)?"
+Data Engineering,Integration & APIs,Data Ingestion from External Systems,"Is ingestion of external data automated and monitored, or done manually via spreadsheets/files?"
+Data Engineering,Integration & APIs,Data Ingestion from External Systems,How often do API schema changes or vendor disruptions impact ingestion?
+Data Engineering,Integration & APIs,Outbound Data Distribution,"Can business systems (e.g., Salesforce, HubSpot, Slack, ERP tools) be programmatically enriched with data?"
+Data Engineering,Integration & APIs,Outbound Data Distribution,Do you use reverse ETL or similar solutions to send data back into operational systems?
+Data Engineering,Integration & APIs,Outbound Data Distribution,Are there APIs or data products designed to support downstream consumers?
+Data Engineering,Integration & APIs,Monitoring & Maintenance,"Are API integrations monitored for uptime, error rates, and throughput?"
+Data Engineering,Integration & APIs,Monitoring & Maintenance,How are changes to API versions or schemas managed across the data stack?
+Data Engineering,Integration & APIs,Monitoring & Maintenance,Are SLAs defined for critical integrations?
+Data Engineering,Integration & APIs,Security & Access Control,How is authentication handled for internal vs. external APIs?
+Data Engineering,Integration & APIs,Security & Access Control,"Are secrets and tokens managed securely (e.g., via vaults, environment variables)?"
+Data Engineering,Integration & APIs,Security & Access Control,Do different teams have appropriately scoped access to read/write APIs?
+Data Engineering,Integration & APIs,Documentation & Governance,Are APIs and integration flows documented and discoverable by internal stakeholders?
+Data Engineering,Integration & APIs,Documentation & Governance,Is ownership and change management clear for each integration?
+Data Engineering,Integration & APIs,Documentation & Governance,Are integration tests automated and part of your CI/CD workflows?
+Data Engineering,Cost Management,Cost Visibility & Reporting,"Do you have visibility into the costs incurred by your data pipelines, queries, and infrastructure?"
+Data Engineering,Cost Management,Cost Visibility & Reporting,"Are costs broken down by department, project, team, or environment (e.g., dev, prod)?"
+Data Engineering,Cost Management,Cost Visibility & Reporting,How often are cost reports or dashboards reviewed by data engineering leadership?
+Data Engineering,Cost Management,Monitoring & Alerts,Do you receive automated alerts when costs exceed predefined thresholds?
+Data Engineering,Cost Management,Monitoring & Alerts,"Can you track cost anomalies (e.g., sudden spikes from long-running queries or failed jobs)?"
+Data Engineering,Cost Management,Monitoring & Alerts,"Are alerts actionable and tied to specific users, pipelines, or services?"
+Data Engineering,Cost Management,Optimization Efforts,Have you conducted cost audits or optimization reviews in the past 6–12 months?
+Data Engineering,Cost Management,Optimization Efforts,"What tooling or processes do you use to reduce unnecessary compute, storage, or idle resources?"
+Data Engineering,Cost Management,Optimization Efforts,Are inefficient queries or pipelines regularly identified and refactored?
+Data Engineering,Cost Management,Access & Budget Governance,"Who is authorized to provision cloud data resources (e.g., warehouses, clusters)?"
+Data Engineering,Cost Management,Access & Budget Governance,Are there limits or quotas in place to prevent runaway spend?
+Data Engineering,Cost Management,Access & Budget Governance,Is there a budget governance process for new data initiatives?
+Data Engineering,Cost Management,Cost Attribution & Chargeback,"Can you attribute costs to specific teams, services, or use cases?"
+Data Engineering,Cost Management,Cost Attribution & Chargeback,Is there a chargeback or showback model in place for business stakeholders or departments?
+Data Engineering,Cost Management,Cost Attribution & Chargeback,How is cost accountability enforced or incentivized across departments?
+Data Engineering,Cost Management,Forecasting & Planning,Do you forecast future data infrastructure costs based on usage growth or new projects?
+Data Engineering,Cost Management,Forecasting & Planning,How accurate have past forecasts been compared to actual costs?
+Data Engineering,Cost Management,Forecasting & Planning,Are cost considerations a part of the design phase for new pipelines or infrastructure changes?
+Data Engineering,Cost Management,Tools & Automation,"What tools or dashboards do you use for cost visibility (e.g., AWS Cost Explorer, Snowflake Usage, custom Grafana)?"
+Data Engineering,Cost Management,Tools & Automation,"Is cost data integrated into your observability or workflow orchestration platforms (e.g., Airflow, dbt Cloud)?"
+Data Engineering,Cost Management,Tools & Automation,Can stakeholders self-serve cost data for their own projects or teams?
+Data Engineering,Cost Management,Cultural Awareness & Practices,How aware are engineers of the cost impact of their data workflows?
+Data Engineering,Cost Management,Cultural Awareness & Practices,"Is cost discussed during pull requests, code reviews, or architecture decisions?"
+Data Engineering,Cost Management,Cultural Awareness & Practices,What’s the most expensive recurring cost in your data stack—and is it justified?

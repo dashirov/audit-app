@@ -1,0 +1,7 @@
+flask
+flask-cors
+pandas
+openpyxl
+flask_sqlalchemy
+python-dotenv
+psycopg2-binary==2.9.10

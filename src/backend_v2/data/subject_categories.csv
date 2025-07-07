@@ -1,0 +1,308 @@
+subject_area,name,objective,activities
+Product Analytics,User Behavior Analytics,"Understand how users navigate and interact with your product to identify patterns, friction points, and opportunities.","- Track and analyze user journeys (session paths, funnels)
+- Identify drop-off points in core workflows
+- Use heatmaps and clickstream data
+- Build cohorts based on behavior"
+Product Analytics,Feature Adoption & Engagement,Measure how and how often users adopt and use new or existing features.,"- Calculate feature adoption rate
+- Time-to-adoption analysis
+- Segment users by feature usage
+- Track impact of features on retention"
+Product Analytics,Retention & Churn Analysis,Maximize user retention and reduce churn by identifying at-risk users and lifecycle trends.,"- Compute retention cohorts (D1, D7, D30)
+- Identify churn signals
+- Predictive churn modeling
+- Churn interviews"
+Product Analytics,Product Experimentation & A/B Testing,Validate product decisions through controlled experiments to ensure measurable improvements.,"- Design/run A/B or multivariate tests
+- Analyze impact using significance testing
+- Track exposure and sample sizes
+- Use sequential/Bayesian testing"
+Product Analytics,Voice of Customer (VoC) & Feedback Loops,Capture user sentiment and actionable feedback to guide product improvements.,"- Analyze NPS, CSAT, CES
+- Tag and theme feedback
+- Monitor reviews/social listening
+- Integrate survey data into product analytics"
+Product Analytics,Cross-Platform Product Analytics,"Gain a unified view of user experience across devices and platforms (web, iOS, Android, etc.)","- Stitch user identities across devices
+- Analyze cross-device consistency
+- Normalize event schemas
+- Measure platform-specific metrics"
+Product Analytics,Product Analytics Infrastructure,"Ensure reliable, scalable, and trusted analytics data to support product decisions.","- Implement event tracking/CDP
+- Create event taxonomy and governance
+- Automate QA of event tracking
+- Establish self-service dashboards"
+Data Engineering,Data Ingestion,Extract data from diverse sources efficiently and reliably,"- Implement batch and streaming data ingestion
+- Use standardized connectors for sources (e.g., Kafka, S3, APIs)
+- Enable retry mechanisms and dead-letter queues
+- Monitor ingestion latency and error rates"
+Data Engineering,Data Storage & Warehousing,"Store data in scalable, cost-effective, and query-optimized ways","- Design scalable cloud-based storage solutions
+- Use partitioning and clustering for performance
+- Choose appropriate storage formats (e.g., Parquet, Delta)
+- Optimize table structures for analytical queries"
+Data Engineering,Data Transformation (ETL/ELT),"Cleanse, enrich, and format data for downstream use","- Implement modular, version-controlled transformation logic
+- Use dbt or ETL tools for orchestration
+- Schedule and monitor incremental model execution
+- Track data lineage and dependencies"
+Data Engineering,Data Quality & Governance,Ensure data trustworthiness and compliance with standards,"- Define and enforce data validation rules
+- Set up data contracts and ownership
+- Implement data quality monitoring and alerts
+- Conduct regular audits and reconciliation checks"
+Data Engineering,Data Modeling & Schema Design,Design flexible and efficient data structures for analytics,"- Create logical and physical models for analytics
+- Normalize or denormalize as needed for performance
+- Use dimensional modeling (star, snowflake)
+- Document data schemas and changes"
+Data Engineering,Metadata Management,Document and catalog datasets for discoverability,"- Implement data cataloging tools (e.g., Amundsen, DataHub)
+- Capture technical and business metadata
+- Track dataset usage and popularity
+- Provide searchable access to metadata"
+Data Engineering,Data Security & Privacy,"Secure data across storage, processing, and access layers","- Apply role-based access control (RBAC)
+- Encrypt data at rest and in transit
+- Monitor and log data access
+- Perform regular access reviews"
+Data Engineering,Performance Optimization,Improve performance of queries and pipelines,"- Profile and optimize slow queries
+- Use caching layers and materialized views
+- Apply indexing strategies
+- Tune pipeline performance"
+Data Engineering,Scalability & Infrastructure,Enable systems to handle growing data volumes and complexity,"- Deploy cloud-native, scalable storage and compute
+- Use autoscaling infrastructure for elasticity
+- Decouple storage and compute when possible
+- Manage infrastructure as code"
+Data Engineering,Automation & Workflow Orchestration,Automate routine data tasks and processes,"- Schedule and monitor data workflows (e.g., with Airflow, Dagster)
+- Implement retry and failure handling
+- Parameterize and modularize tasks
+- Ensure workflow versioning and dependency tracking"
+Data Engineering,Observability & Monitoring,"Monitor data workflows for health, latency, and anomalies","- Set SLAs and monitor pipeline health
+- Create dashboards for job latency, volume, and errors
+- Integrate alerting tools (e.g., PagerDuty, Slack)
+- Capture end-to-end lineage and metrics"
+Data Engineering,Disaster Recovery & Backup,Ensure recoverability and high availability of data,"- Set up regular data backups
+- Enable multi-region data replication
+- Test disaster recovery scenarios
+- Define and maintain RTO/RPO targets"
+Data Engineering,Self-service & Democratization,Empower users to access and analyze data without bottlenecks,"- Provide governed access to BI tools (e.g., Tableau, Looker)
+- Create semantic layers for business users
+- Enable no-code/low-code data exploration
+- Offer training and documentation"
+Data Engineering,Integration & APIs,Facilitate data exchange with internal and external systems,"- Build and maintain RESTful or GraphQL APIs
+- Provide SDKs for internal and external developers
+- Monitor API performance and usage
+- Secure APIs with authentication and rate-limiting"
+Data Engineering,Cost Management,Control infrastructure and operational costs,"- Monitor compute and storage costs
+- Set usage alerts and budgets
+- Optimize queries and materializations
+- Choose cost-effective architectures"
+Data Analytics,Descriptive Analytics,Understand past performance and summarize data,"- Build dashboards that summarize historical performance
+- Create periodic business reports and summaries
+- Use aggregate statistics to provide snapshots
+- Align reports to stakeholder goals"
+Data Analytics,Diagnostic Analytics,Identify drivers and reasons behind trends and anomalies,"- Conduct root-cause analysis of key metrics
+- Perform slicing and dicing of dimensions
+- Investigate outliers and anomalies
+- Collaborate with domain experts for context"
+Data Analytics,Predictive Analytics,Forecast likely future outcomes,"- Apply time-series forecasting techniques
+- Use regression, classification, or clustering models
+- Validate model accuracy and performance
+- Integrate predictive insights into reports"
+Data Analytics,Prescriptive Analytics,Recommend actions based on data insights,"- Build optimization models for decision support
+- Implement simulations and scenario analysis
+- Recommend actions with expected outcomes
+- Enable dynamic planning tools"
+Data Analytics,Data Visualization & Storytelling,Communicate insights clearly to decision-makers,"- Create compelling data narratives
+- Design intuitive and interactive dashboards
+- Match visualization types to audience needs
+- Emphasize clarity and actionable takeaways"
+Data Analytics,Data Quality & Integrity,"Ensure analysis is based on clean, reliable data","- Implement data validation rules
+- Monitor data for gaps or inconsistencies
+- Maintain data dictionaries and ownership
+- Apply profiling tools and sanity checks"
+Data Analytics,Segmentation & Personalization,Group users or products for targeted strategies,"- Cluster customers or users based on behavior
+- Build personas and behavioral segments
+- Use segments for targeting and personalization
+- Monitor segment performance over time"
+Data Analytics,Experimentation & A/B Testing,Test changes and measure their effects rigorously,"- Design statistically valid tests
+- Split traffic and monitor exposure
+- Evaluate significance and effect size
+- Document and share test learnings"
+Data Analytics,Metric & KPI Development,Define and align performance measures with goals,"- Define KPIs aligned with business goals
+- Establish calculation logic and documentation
+- Create scorecards and reporting frameworks
+- Regularly review and refine metrics"
+Data Analytics,Business Domain Knowledge,Ground insights in relevant business context,"- Collaborate with SMEs to interpret data
+- Translate data insights into business context
+- Run workshops and feedback sessions
+- Tailor analyses to operational needs"
+Data Analytics,Data Governance & Compliance,Comply with data privacy and regulatory standards,"- Enforce access control and data privacy
+- Maintain compliance with relevant regulations
+- Document lineage and audit trails
+- Establish data governance council"
+Data Analytics,Automation & Scalability,Ensure repeatability and efficiency in analytics processes,"- Automate dashboard refresh and distribution
+- Build scalable pipelines for repeat analyses
+- Leverage templates and reusable assets
+- Apply parameterization and scheduling"
+Data Analytics,Advanced Analytics & AI,Apply ML/AI techniques to discover deeper insights,"- Integrate ML/AI methods into analytics
+- Use NLP, LLMs, and clustering for insights
+- Conduct anomaly and root cause detection
+- Operationalize and monitor advanced models"
+Data Analytics,Collaboration & Communication,Collaborate effectively with stakeholders,"- Present findings in stakeholder meetings
+- Write concise and insightful summaries
+- Create shareable visuals and annotations
+- Involve others in analysis cycles"
+Data Analytics,Continuous Learning & Innovation,"Stay updated with methods, tools, and trends","- Stay current on tools and best practices
+- Join communities of practice
+- Attend training, workshops, and webinars
+- Share learnings with peers"
+Business Intelligence and Corporate Reporting,Data Integration,Consolidate data from multiple sources for unified access,"- Build robust ETL/ELT pipelines for multiple source systems
+- Integrate structured and unstructured data
+- Use connectors to unify disparate data formats
+- Maintain data lake/warehouse consistency"
+Business Intelligence and Corporate Reporting,Data Modeling,Structure data to support analytics and decision-making,"- Design star and snowflake schemas
+- Define semantic models and calculated fields
+- Enable business-friendly data abstractions
+- Maintain documentation of metric definitions"
+Business Intelligence and Corporate Reporting,Data Quality & Governance,"Ensure data trustworthiness, compliance, and lineage tracking","- Implement automated data validation rules
+- Control access through RBAC policies
+- Track data lineage and transformations
+- Monitor data freshness and accuracy"
+Business Intelligence and Corporate Reporting,Reporting & Dashboards,Provide visual and interactive access to key metrics,"- Create interactive, role-based dashboards
+- Use drill-downs and filters for exploration
+- Highlight KPIs and performance trends
+- Automate report distribution and refresh"
+Business Intelligence and Corporate Reporting,Self-Service BI,Empower business users to explore data independently,"- Deploy governed datasets for ad hoc analysis
+- Use no-code tools for non-technical users
+- Provide training and usage documentation
+- Monitor self-service adoption and usage"
+Business Intelligence and Corporate Reporting,Performance & Scalability,Ensure responsiveness of BI systems and scalability,"- Tune BI tools for speed and concurrency
+- Optimize query logic and data refresh rates
+- Use caching, extracts, and aggregations
+- Monitor and auto-scale BI infrastructure"
+Business Intelligence and Corporate Reporting,Advanced Analytics Integration,Incorporate predictive and prescriptive analytics into BI,"- Embed predictive model outputs in dashboards
+- Support what-if and scenario analysis
+- Connect BI tools with ML platforms
+- Enable advanced filters and cohort analysis"
+Business Intelligence and Corporate Reporting,Business Alignment & KPIs,Align insights with business goals and departmental KPIs,"- Co-create scorecards with business teams
+- Align reports to OKRs and strategic goals
+- Monitor metric ownership and accountability
+- Support planning and performance reviews"
+Business Intelligence and Corporate Reporting,Data Literacy & Enablement,Improve data fluency and enablement across users,"- Conduct workshops and office hours
+- Develop internal documentation and training
+- Promote best practices in data interpretation
+- Provide onboarding for BI tools"
+Business Intelligence and Corporate Reporting,BI Governance & Strategy,"Define BI ownership, strategy, and governance policies","- Define BI team responsibilities and processes
+- Establish Center of Excellence or Governance Board
+- Monitor tool adoption and usage policy adherence
+- Maintain BI roadmap and capabilities catalog"
+Business Intelligence and Corporate Reporting,Corporate Reporting,"Generate accurate, timely, and compliant reports for internal and external stakeholders","- Automate generation of monthly/quarterly reports
+- Ensure regulatory and audit compliance
+- Maintain narratives and commentary workflows
+- Coordinate with finance and legal stakeholders"
+AI Enablement,Data Readiness,"Ensure the right data is available, accessible, high-quality, and ethically sourced","- Ensure access to high-quality, diverse datasets
+- Label and annotate training data
+- Enforce data documentation and cataloging
+- Ensure privacy-preserving data sourcing"
+AI Enablement,ML Infrastructure & Tooling,"Provide the technical foundation for building, training, and deploying models","- Provision scalable compute (e.g., GPUs, TPUs)
+- Deploy MLOps tools for training and deployment
+- Maintain model registries and versioning
+- Automate build and deploy pipelines"
+AI Enablement,Model Development & Experimentation,Enable fast iteration and testing of AI/ML models,"- Rapidly iterate and tune model parameters
+- Track experiments with metadata and metrics
+- Evaluate model performance across slices
+- Support collaboration between teams"
+AI Enablement,Model Deployment & Monitoring,Ensure models are deployed reliably and monitored in production,"- Deploy models to real-time and batch environments
+- Monitor model performance and drift
+- Set up alerting for data or prediction anomalies
+- Enable canary rollouts and rollback mechanisms"
+AI Enablement,AI Governance & Ethics,Guide the responsible and fair use of AI,"- Conduct bias audits and fairness testing
+- Maintain transparency via model cards
+- Review models for explainability and compliance
+- Define policies for ethical AI use"
+AI Enablement,Security & Privacy,"Safeguard models, data, and outputs from misuse or attacks","- Apply encryption and access control to model assets
+- Protect training data against inference attacks
+- Implement secure APIs and audit logging
+- Use adversarial testing and red teaming"
+AI Enablement,Organizational Enablement,"Prepare teams, processes, and leadership for successful AI adoption","- Train staff in AI principles and tooling
+- Run AI strategy workshops
+- Build cross-functional AI taskforces
+- Champion change management initiatives"
+AI Enablement,Use Case Identification & Prioritization,Align AI investments with business value,"- Maintain a pipeline of potential use cases
+- Score use cases based on ROI and feasibility
+- Validate with pilot projects or prototypes
+- Involve stakeholders in prioritization"
+AI Enablement,Foundation Models & Generative AI Readiness,Equip the organization to leverage LLMs and other foundation models,"- Test and evaluate LLMs (e.g., GPT, Claude, Gemini)
+- Use retrieval-augmented generation (RAG)
+- Implement prompt management and orchestration
+- Ensure grounding and content validation"
+AI Enablement,Self-service & Democratization of AI,Empower non-technical users to utilize AI safely and effectively,"- Provide no-code or AutoML tools for users
+- Enable prompt-based exploration of data
+- Publish internal AI toolkits and templates
+- Monitor usage and provide guardrails"
+AI Enablement,Performance & Cost Optimization,Manage the computational and financial efficiency of AI solutions,"- Optimize model inference speed and cost
+- Apply distillation, pruning, or quantization
+- Track compute usage and budget adherence
+- Use autoscaling and spot instances"
+AI Enablement,Regulatory Compliance,Ensure AI implementations adhere to applicable laws and standards,"- Classify models by risk and use case
+- Track consent and data subject rights
+- Document compliance with AI laws (e.g., EU AI Act)
+- Run periodic regulatory reviews and audits"
+Marketing Analytics,Attribution Modeling,Quantify the contribution of each marketing touchpoint to conversions,"- Implement multi-touch attribution models (e.g., linear, time decay, data-driven)
+- Analyze user conversion paths across channels
+- Apply path analysis to understand touchpoint sequences
+- Allocate conversion credit fairly across touchpoints"
+Marketing Analytics,Campaign Performance Measurement,Evaluate the effectiveness and ROI of marketing campaigns,"- Set up campaign tracking (e.g., UTM tagging, channel IDs)
+- Build performance dashboards (e.g., impressions, clicks, conversions)
+- Measure uplift against baseline or control groups
+- Analyze return on ad spend (ROAS) and customer acquisition cost (CAC)"
+Marketing Analytics,Customer Segmentation,Identify and categorize customer cohorts to tailor marketing strategies,"- Apply RFM (Recency, Frequency, Monetary) analysis
+- Build behavioral or psychographic segments
+- Use clustering techniques to discover customer groups
+- Leverage segments for targeting and personalization"
+Marketing Analytics,Marketing Spend Optimization,Maximize ROI by allocating budget efficiently across channels,"- Run media mix modeling (MMM) to understand channel effectiveness
+- Analyze marginal ROI across campaigns and platforms
+- Perform bid strategy simulations and optimizations
+- Adjust budgets based on elasticity and saturation curves"
+Marketing Analytics,Lead & Funnel Analytics,Understand lead generation effectiveness and conversion through sales funnel,"- Analyze conversion rates across the funnel stages
+- Score and qualify leads based on behavior and fit
+- Monitor sales pipeline progression and bottlenecks
+- Integrate CRM data for end-to-end visibility"
+Marketing Analytics,Digital Channel Analytics,Analyze performance and audience behavior across digital marketing platforms,"- Track web and mobile user behavior using analytics tools (e.g., GA4, Mixpanel)
+- Measure SEO/SEM effectiveness and engagement
+- Attribute outcomes to paid, owned, and earned media
+- Monitor platform-specific KPIs (e.g., CPC, CTR, CPM)"
+Marketing Analytics,Experimentation & A/B Testing,Test and validate marketing hypotheses to improve outcomes,"- Design marketing experiments with proper controls
+- Use testing platforms to launch and monitor variants
+- Apply statistical methods to assess lift and significance
+- Document and share experiment learnings"
+Marketing Analytics,Marketing Data Infrastructure,Ensure data systems support comprehensive and timely marketing insights,"- Build ETL pipelines for ad platforms, web analytics, and CRM
+- Implement customer data platforms (CDPs) for unified view
+- Enforce data standards like campaign naming and tagging
+- Ensure freshness, consistency, and completeness of marketing datasets"
+Privacy Protection and Data Loss Prevention,Data Classification & Access Control,Ensure data is categorized and access is granted based on sensitivity,"- Maintain data inventory and classification
+- Tag data based on sensitivity (e.g., PII, PHI)
+- Implement role-based access control (RBAC)
+- Perform least privilege access reviews"
+Privacy Protection and Data Loss Prevention,PII/PHI Detection & Masking,Detect and protect personally identifiable and health information,"- Detect sensitive fields using scanning tools
+- Tokenize or pseudonymize personal data
+- Mask PII/PHI in staging and test environments
+- Apply field-level encryption or obfuscation"
+Privacy Protection and Data Loss Prevention,Consent Management,Enforce and track user consent in data collection and processing,"- Capture user consent via user-friendly interfaces
+- Track consent versioning and changes
+- Implement cookie management and opt-out flows
+- Enforce lawful basis for processing data"
+Privacy Protection and Data Loss Prevention,Audit Logging & Monitoring,Log and monitor access and changes to sensitive data,"- Log access to sensitive data and actions
+- Enable field-level audit trails
+- Detect anomalies in access patterns
+- Set up alerting for suspicious activities"
+Privacy Protection and Data Loss Prevention,Data Loss Prevention (DLP),Prevent unauthorized transfer or leakage of sensitive data,"- Deploy endpoint DLP tools for file, clipboard, and print protection
+- Monitor and control network data egress
+- Define and enforce DLP policies in cloud platforms
+- Audit file sharing and export events"
+Privacy Protection and Data Loss Prevention,Data Retention & Disposal,Ensure data is kept only as long as necessary and disposed securely,"- Define data retention schedules by data type
+- Implement automated deletion workflows
+- Securely dispose of outdated backups and archives
+- Track data lifecycle and expiration"
+Privacy Protection and Data Loss Prevention,Privacy by Design,Integrate privacy considerations into data products and system development,"- Conduct Data Protection Impact Assessments (DPIAs)
+- Integrate privacy checks in SDLC
+- Minimize personal data collection by default
+- Use aggregation or redaction where possible"
+Privacy Protection and Data Loss Prevention,Regulatory Compliance,"Maintain compliance with laws such as GDPR, CCPA, HIPAA"," - Maintain readiness for GDPR, CCPA, HIPAA audits
+- Enable data Subject access Requests (DSARs)
+- Train employees on data Protection practices
+- Monitor changes in privacy regulations
+- Enable data Subject access Requests (DSARs)
+- Train employees on data Protection practices
+- Monitor changes in privacy regulations"

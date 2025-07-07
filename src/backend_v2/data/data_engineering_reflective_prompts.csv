@@ -1,0 +1,52 @@
+practice,area,prompt,insight_goal
+Data Engineering,Data Ingestion,What recent ingestion-related incident taught you the most?,Reveals responsiveness and lessons learned from ingestion failures.
+Data Engineering,Data Ingestion,What’s the biggest bottleneck or source of friction in your ingestion pipeline today?,Identifies current challenges impacting data ingestion efficiency.
+Data Engineering,Data Ingestion,What’s your goal for improving ingestion capabilities over the next 6–12 months?,Shows strategic planning and prioritization for ingestion improvements.
+Data Engineering,Data Storage & Warehousing,What warehouse-related incident caused the biggest disruption recently?,Highlights vulnerability and impact of warehouse failures.
+Data Engineering,Data Storage & Warehousing,What are your biggest pain points around your warehouse today?,Identifies ongoing operational challenges in data storage.
+Data Engineering,Data Storage & Warehousing,"What is the next priority on your roadmap for improving warehouse reliability, usability, or cost?",Reveals focus areas for enhancing warehouse performance and cost management.
+Data Engineering,Data Transformation (ETL/ELT),What transformation or modeling incident caused the most downstream issues?,Exposes weaknesses in transformation processes affecting data quality.
+Data Engineering,Data Transformation (ETL/ELT),What are your biggest transformation maintenance or scalability challenges today?,Identifies operational limits and maintenance burdens in transformation workflows.
+Data Engineering,Data Transformation (ETL/ELT),"How frequently are business logic changes made, and how quickly do they propagate to data products?",Assesses agility and responsiveness of transformation processes to business needs.
+Data Engineering,Data Quality & Governance,What data quality issue caused the greatest business impact in the last year?,Highlights critical data quality risks and their business consequences.
+Data Engineering,Data Quality & Governance,"What are your most common types of data incidents, and where do they originate?",Reveals root causes and patterns in data quality incidents.
+Data Engineering,Data Quality & Governance,What’s your top governance priority for the next 6–12 months?,Shows governance focus and planned improvements for data management.
+Data Engineering,Metadata Management,What’s the most difficult dataset to document or discover in your organization? Why?,Identifies gaps in metadata coverage and discoverability.
+Data Engineering,Metadata Management,How often is metadata updated when schemas change?,Assesses metadata maintenance practices and schema alignment.
+Data Engineering,Metadata Management,How would you describe the culture of metadata stewardship in your org?,Reveals organizational attitudes towards metadata responsibility.
+Data Engineering,Data Security & Privacy,What’s your greatest risk in terms of data security today?,Highlights key vulnerabilities and security concerns.
+Data Engineering,Data Security & Privacy,When was the last time a data access audit resulted in changes?,Shows effectiveness and frequency of security audits.
+Data Engineering,Data Security & Privacy,How do you ensure security policies don’t block legitimate analytics work?,Assesses balance between security and operational flexibility.
+Data Engineering,Performance Optimization,What was the last major performance bottleneck you resolved?,Reveals capacity for identifying and addressing performance issues.
+Data Engineering,Performance Optimization,How do you balance cost vs. speed in your data stack?,Shows strategic trade-offs in performance and cost management.
+Data Engineering,Performance Optimization,When was the last time you deprecated or rebuilt a performance-harming asset?,Highlights maintenance practices and technical debt management.
+Data Engineering,Scalability & Infrastructure,"What was your last scalability-related incident, and what did you learn?",Exposes scalability challenges and organizational learning.
+Data Engineering,Scalability & Infrastructure,What bottlenecks appear most often when scaling your workloads?,Identifies recurring infrastructure limitations.
+Data Engineering,Scalability & Infrastructure,Where is your architecture least future-proof today?,Reveals architectural risks and areas needing modernization.
+Data Engineering,Automation & Workflow Orchestration,What’s your most critical orchestrated workflow and how is it protected against failure?,Assesses robustness and risk management of automation.
+Data Engineering,Automation & Workflow Orchestration,What was the last automation-related outage and how was it resolved?,Shows incident response and recovery capabilities.
+Data Engineering,Automation & Workflow Orchestration,What areas of your orchestration tooling are currently bottlenecks?,Identifies tool limitations impacting workflow efficiency.
+Data Engineering,Observability & Monitoring,What was the last major data incident and how was it discovered?,Reveals effectiveness of monitoring and alerting systems.
+Data Engineering,Observability & Monitoring,Where in your pipeline do you feel visibility is lacking today?,Identifies blind spots in data observability.
+Data Engineering,Observability & Monitoring,How confident are you that you’re aware of issues before your consumers are?,Assesses proactive incident detection and communication.
+Data Engineering,Disaster Recovery & Backup,"What was the last time you needed to restore from backup, and how did it go?",Evaluates disaster recovery readiness and effectiveness.
+Data Engineering,Disaster Recovery & Backup,Where are the gaps in your current DR process?,Identifies weaknesses in disaster recovery planning.
+Data Engineering,Disaster Recovery & Backup,"If your data warehouse failed today, how long would it take to be back online?",Measures recovery time objectives and preparedness.
+Data Engineering,Self-service & Democratization,Can you describe the last time a non-technical stakeholder independently explored data or built a report without analyst help?,Reveals adoption and effectiveness of self-service analytics.
+Data Engineering,Self-service & Democratization,What’s an example of a business decision that was made faster because of self-service access to data?,Highlights impact of democratized data on decision-making speed.
+Data Engineering,Self-service & Democratization,When was the last time a business team was blocked due to lack of data access or understanding?,Identifies access or literacy barriers limiting self-service.
+Data Engineering,Self-service & Democratization,What types of data questions still require engineering or analyst intervention today?,Reveals complexity and limitations in self-service capabilities.
+Data Engineering,Self-service & Democratization,How confident are most stakeholders when working with data tools or interpreting metrics?,Assesses user confidence and data literacy levels.
+Data Engineering,Self-service & Democratization,What misconceptions or repeated questions do you notice from business users?,Identifies common misunderstandings and training needs.
+Data Engineering,Self-service & Democratization,"Do users feel they have access to the data they need—or too much, or not enough?",Reveals perceptions of data availability and governance balance.
+Data Engineering,Self-service & Democratization,What concerns exist around data misuse or misinterpretation in self-service tools?,Highlights risks related to data governance and user behavior.
+Data Engineering,Self-service & Democratization,Are the tools provided for self-service considered easy to use and reliable?,Assesses usability and reliability of self-service platforms.
+Data Engineering,Self-service & Democratization,What workarounds have users developed when self-service tools fall short?,Identifies gaps driving unofficial processes.
+Data Engineering,Self-service & Democratization,How has the use of data by business users changed over the past year?,Tracks trends in data adoption and engagement.
+Data Engineering,Self-service & Democratization,What self-service successes or failures influenced how the current environment is structured?,Reveals lessons learned shaping self-service strategy.
+Data Engineering,Integration & APIs,"When a data integration or API fails, how quickly is the issue detected, and what’s the typical resolution process?",Assesses monitoring and incident response for integrations.
+Data Engineering,Integration & APIs,"If someone needed to build or update an integration today, how easily could they discover existing APIs, documentation, and best practices?",Evaluates discoverability and documentation quality.
+Data Engineering,Integration & APIs,"How are API credentials, tokens, and secrets managed, rotated, and audited?",Reveals security practices around API management.
+Data Engineering,Cost Management,"When costs spike unexpectedly, how is the root cause identified—and by whom?","Reveals maturity of monitoring, ownership, and diagnostic capabilities across the team."
+Data Engineering,Cost Management,"How confident are you in your ability to attribute data infrastructure costs to specific teams, products, or use cases?","Probes cost transparency, tagging discipline, and internal accountability."
+Data Engineering,Cost Management,In what ways are engineers made aware of the cost impact of their workflows or architectural choices?,Surfaces whether cost-awareness is embedded in engineering culture and decision-making.

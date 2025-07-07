@@ -15,7 +15,6 @@ COPY src/frontend/ ./frontend/
 COPY .env ./.env
 
 # Expose port
-EXPOSE 5000
-
+EXPOSE 5172
 # Run app
 CMD ["python", "backend/app.py"]
