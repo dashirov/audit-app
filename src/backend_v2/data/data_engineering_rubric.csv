@@ -1,0 +1,676 @@
+practice,area,capability,state,score,level_name
+Data Engineering,Data Ingestion,Ingestion Framework & Architecture,No consistent approach or tooling; ingestion is manual or script-based.,1,Initial / Ad Hoc
+Data Engineering,Data Ingestion,Data Source Coverage,Only a few critical sources ingested.,1,Initial / Ad Hoc
+Data Engineering,Data Ingestion,Change Data Capture (CDC),Full table refreshes; no change detection logic.,1,Initial / Ad Hoc
+Data Engineering,Data Ingestion,Monitoring & Alerting,No monitoring or alerts; ingestion breaks discovered manually.,1,Initial / Ad Hoc
+Data Engineering,Data Ingestion,Validation & Quality Checks,No validation on incoming data.,1,Initial / Ad Hoc
+Data Engineering,Data Ingestion,Metadata & Lineage,Ingested datasets are undocumented; unclear where data came from.,1,Initial / Ad Hoc
+Data Engineering,Data Ingestion,Security & Compliance,Credentials hardcoded or shared; no handling of PII or compliance.,1,Initial / Ad Hoc
+Data Engineering,Data Ingestion,Operational Maturity,Ingestion scripts owned by individuals; no standards.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Architecture & Design,No defined architecture; storage systems chosen ad hoc.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Schema Management & Modeling,Schemas evolve without planning; documentation absent.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Partitioning & Performance Design,No partitioning or indexing used; queries slow on large data.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Storage Scalability & Cost,Storage unmanaged; no cost visibility or archiving strategy.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Access Control & Permissions,Permissions managed manually; no visibility into who accesses what.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Data Lineage & Documentation,No visibility into where data comes from or how it’s transformed.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Reliability & SLAs,No monitoring or guarantees for data availability/freshness.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Environment Management,No separation between prod/dev; changes made directly.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Tooling & Observability,No monitoring or alerting for warehouse behavior or availability.,1,Initial / Ad Hoc
+Data Engineering,Data Storage & Warehousing,Governance & Compliance,No classification of sensitive data or compliance policies in place.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Data Quality Monitoring,No formal data quality monitoring. Issues found reactively.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Data Validation & Testing,Little to no validation logic in place.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Ownership & Stewardship,No assigned data owners. Issues often go unclaimed.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Cataloging & Discoverability,No central catalog. Data discovery relies on tribal knowledge.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Data Lineage,No understanding of upstream/downstream dependencies.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Master & Reference Data Management,No authoritative sources; reference data inconsistently used.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Access Control & Classification,Access granted ad hoc; no classification of sensitive data.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Policy Enforcement & Compliance,Policies undefined or undocumented.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Change Management & Contracts,Schema changes managed manually. Breaking changes common.,1,Initial / Ad Hoc
+Data Engineering,Data Quality & Governance,Incident Management & RCA,Data issues often go unnoticed or unresolved.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Modeling Approach & Standards,No consistent approach. Models vary by engineer.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Semantic Consistency,Metrics and terms vary between teams; confusion is common.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Collaboration & Requirements,Models built based on assumptions with little business input.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Model Versioning & Change Mgmt,Models updated ad hoc. Breaking changes common.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Documentation & Discoverability,No documentation; data use relies on tribal knowledge.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Schema Enforcement & Contracts,No schema validation or controls in place.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Normalization & Denormalization,No rationale; data often overly flattened or fragmented.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Tooling & Frameworks,SQL scripts or Excel files used for modeling.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Testing & Data Quality,Models not tested; downstream issues common.,1,Initial / Ad Hoc
+Data Engineering,Data Modeling & Schema Design,Usability for Analytics,Modeled data is hard to query; joins and logic are complex.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Types & Scope of Metadata,"Minimal or no metadata collected. Only system-generated fields (e.g., table names, timestamps).",1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Metadata Collection Process,Manual and inconsistent. No processes for ensuring metadata is up-to-date.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Tooling & Platform Integration,No metadata platform or catalog in use.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Search & Discovery,Users rely on tribal knowledge or personal bookmarks to find data.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Documentation & Descriptions,No documentation or stale/incomplete notes on datasets.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Data Lineage,Lineage unknown or inferred manually through tribal knowledge.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Stewardship & Ownership,No defined data owners.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,"Policy, Classification & Governance",No metadata governance or classification of assets.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Automation & Self-Service,No automation; metadata not used for any active processes.,1,Initial / Ad Hoc
+Data Engineering,Metadata Management,Cultural Adoption,Metadata seen as overhead. No organizational buy-in.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Access Control & Authorization,Ad hoc access controls; no formal process.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Data Classification,No data classification; sensitivity not tracked.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Encryption & Masking,No encryption guarantees.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Audit Logging & Monitoring,No logs or logs inaccessible for auditing.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Privacy by Design,Privacy is not considered during data pipeline or product design.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Subject Rights & Consent,No process for data subject rights or consent tracking.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Vendor & Third-Party Risk,Vendors used without review or contractual protections.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Secure Development & Deployment,No security scanning or review of code and infrastructure.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Incident Response Readiness,No formal process for incident response or data breach.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Compliance & Regulatory Readiness,Unaware or non-compliant with relevant regulations.,1,Initial / Ad Hoc
+Data Engineering,Data Security & Privacy,Security & Privacy Culture,Security viewed as blocker; minimal awareness or training.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Pipeline & Job Performance,No tracking of job durations or resource usage.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Query Performance Tuning,Queries are written ad hoc without optimization.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Partitioning & Indexing,Data is not partitioned; tables scanned in full.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Materializations & Caching,No materializations; all queries run from raw data.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Data Volume Management,No awareness of data growth; long-term data stored without downsampling.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Compute Resource Management,"No visibility into CPU, memory, or warehouse usage.",1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Performance Testing,No performance testing environment or regression checks.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Observability & Alerting,No dashboards or alerts for performance.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Optimization Ownership,No one is accountable for performance.,1,Initial / Ad Hoc
+Data Engineering,Performance Optimization,Feedback & End-User Experience,End-users regularly complain about slow performance.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Elasticity & Auto-Scaling,Infrastructure is fixed; manual scaling required.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Modular Architecture,Monolithic pipelines; tightly coupled components.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Multi-Environment Management,Only one environment exists; changes made directly in production.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Infrastructure as Code (IaC),Infrastructure is manually created; not repeatable.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Vendor Lock-In & Portability,System is tightly coupled to specific vendor features.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Throughput & Latency Handling,Systems fail or slow significantly with load spikes.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Cost Optimization at Scale,No awareness or tracking of infrastructure cost by workload.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,High Availability & Redundancy,Systems have single points of failure.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Multi-Tenancy / Multi-Team Scale,Architecture not designed for multi-team use.,1,Initial / Ad Hoc
+Data Engineering,Scalability & Infrastructure,Scalability Testing & Planning,Scalability is reactive; no forecasting or testing.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Workflow Orchestration Tooling,No orchestration system; pipelines triggered manually or with scripts.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Triggering & Scheduling,"Jobs run on fixed, manual schedules.",1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Monitoring & Alerting,No job monitoring or basic email alerts after failure.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Failure Handling & Retries,Failed jobs require manual investigation and restart.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Parameterization & Reuse,Pipelines are hard-coded and environment-specific.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Documentation & Discoverability,No workflow documentation; understanding requires code reading.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Secrets & Credential Management,Secrets are stored in code or hard-coded files.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Idempotency & State Management,Jobs are not idempotent and reruns cause data duplication or corruption.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,Multi-Tenant Workflow Support,All workflows are bundled together and unorganized; hard to share across teams.,1,Initial / Ad Hoc
+Data Engineering,Automation & Workflow Orchestration,CI/CD & Workflow Testing,No tests or validation before deploying workflows.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Pipeline Health Monitoring,Pipeline status is not actively monitored or only checked manually.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Data Quality Monitoring,No automated checks; quality issues found manually or by end users.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Infrastructure Resource Monitoring,Infrastructure usage is not tracked or monitored reactively.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Logging Practices,"Logs are unstructured, inconsistent, and hard to trace.",1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Alerting & Escalation,No alerting or informal Slack/email-based failure messages.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Lineage & Traceability,No data lineage captured; ownership unclear during failures.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Dashboards & Observability Tools,No centralized view of pipeline health or system metrics.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,SLAs/SLOs for Data Pipelines,No SLAs or expectations defined for pipeline timeliness or availability.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Incident Management,Incidents are undocumented and resolved ad hoc.,1,Initial / Ad Hoc
+Data Engineering,Observability & Monitoring,Proactive Monitoring / Anomaly Detection,Monitoring is reactive; only visible after business impact.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Backup Coverage,No backups or ad hoc manual exports; most data is at risk.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Frequency & Retention,"Backups performed sporadically or manually, if at all.",1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Monitoring & Validation,Backup success not tracked; silent failures possible.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Disaster Recovery Planning,No formal DR plan or understanding of RTO/RPO.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Recovery Testing / Drills,No testing; recovery success is unknown.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Infrastructure Resilience,"Systems are single-zone, non-redundant, or brittle.",1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Data Versioning & Time Travel,No version control of data; overwrites are irreversible.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Access Controls for Backups,No access controls; backups potentially exposed.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Recovery Time (RTO),Unpredictable recovery time; may take days.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Recovery Point (RPO),RPO undefined; backup intervals too long to be useful.,1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Third-Party Dependency Coverage,"No awareness of DR policies for managed services (e.g., SaaS, cloud DBs).",1,Initial / Ad Hoc
+Data Engineering,Disaster Recovery & Backup,Post-Recovery Validation,No validation; consumers learn of issues post-restore.,1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,Data Discoverability,No catalog or documentation; users rely on tribal knowledge.,1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,Access & Permissions,"Ad hoc, manual permissions; delays in provisioning.",1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,BI & Self-Service Tooling,Business users must ask data engineers for queries and reports.,1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,Data Literacy & Enablement,No formal training; low understanding of data assets or terms.,1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,Metric Standardization,KPIs defined inconsistently across departments.,1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,Request Workflows,Most requests require custom engineering support.,1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,Data Access Governance,No governance policies; sensitive data may be exposed accidentally.,1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,Integration with Operational Tools,No integration; users must extract data manually.,1,Initial / Ad Hoc
+Data Engineering,Self-Service & Democratization,Monitoring Usage & Feedback,No tracking of dashboard or dataset usage.,1,Initial / Ad Hoc
+Data Engineering,Integration & APIs,System Integration,"Integrations are mostly manual (e.g., spreadsheets, file uploads); fragile or ad hoc scripts connect systems.",1,Initial / Ad Hoc
+Data Engineering,Integration & APIs,API Design & Exposure,No APIs exposed for data access or sharing; consumers must query DBs directly or request manual exports.,1,Initial / Ad Hoc
+Data Engineering,Integration & APIs,Inbound API Usage,Data from 3rd parties manually retrieved or copied into DBs.,1,Initial / Ad Hoc
+Data Engineering,Integration & APIs,Outbound Data Activation,"No outbound data delivery to tools like CRMs, ERPs, or marketing platforms.",1,Initial / Ad Hoc
+Data Engineering,Integration & APIs,Monitoring & Reliability,No visibility into integration uptime or failures; issues discovered only after stakeholder complaints.,1,Initial / Ad Hoc
+Data Engineering,Integration & APIs,Security & Access Control,API keys and credentials hardcoded or shared manually; no role separation.,1,Initial / Ad Hoc
+Data Engineering,Integration & APIs,Documentation & Governance,No documentation; integrations and APIs maintained by few individuals with tribal knowledge.,1,Initial / Ad Hoc
+Data Engineering,Cost Management,Cost Visibility & Reporting,No cost visibility; teams unaware of spend; billing is opaque.,1,Initial / Ad Hoc
+Data Engineering,Cost Management,Cost Attribution,"No ability to attribute costs to projects, users, or teams.",1,Initial / Ad Hoc
+Data Engineering,Cost Management,Budget Governance & Controls,No spend limits; teams provision resources freely without oversight.,1,Initial / Ad Hoc
+Data Engineering,Cost Management,Monitoring & Alerts,No alerting or tracking of anomalies or spikes.,1,Initial / Ad Hoc
+Data Engineering,Cost Management,Optimization Practices,No cost optimization; pipelines and queries run indefinitely.,1,Initial / Ad Hoc
+Data Engineering,Cost Management,Forecasting & Planning,Costs are not forecasted; planning based on past surprises.,1,Initial / Ad Hoc
+Data Engineering,Cost Management,Cultural Awareness,Teams unaware of how code or infrastructure impacts cost.,1,Initial / Ad Hoc
+Data Engineering,Cost Management,Tools & Automation,No tools in place; billing is manually reviewed monthly.,1,Initial / Ad Hoc
+Data Engineering,Data Ingestion,Ingestion Framework & Architecture,"Some tools are in place, but architecture varies by use case or team.",2,Developing
+Data Engineering,Data Ingestion,Data Source Coverage,Most internal systems ingested; third-party/SaaS sources are handled manually.,2,Developing
+Data Engineering,Data Ingestion,Change Data Capture (CDC),"Partial CDC implemented for high-volume tables, often custom and fragile.",2,Developing
+Data Engineering,Data Ingestion,Monitoring & Alerting,Basic job-level alerting via cron or scripts.,2,Developing
+Data Engineering,Data Ingestion,Validation & Quality Checks,"Occasional checks (row counts, duplicates) done manually.",2,Developing
+Data Engineering,Data Ingestion,Metadata & Lineage,"Partial lineage exists, usually in notebooks or tribal knowledge.",2,Developing
+Data Engineering,Data Ingestion,Security & Compliance,"Basic security (e.g., secrets manager) in place; PII flagged manually.",2,Developing
+Data Engineering,Data Ingestion,Operational Maturity,Teams reuse some scripts; onboarding new sources takes weeks.,2,Developing
+Data Engineering,Data Storage & Warehousing,Architecture & Design,Basic architecture exists but not standardized.,2,Developing
+Data Engineering,Data Storage & Warehousing,Schema Management & Modeling,"Partial modeling approach used inconsistently (e.g., star schema).",2,Developing
+Data Engineering,Data Storage & Warehousing,Partitioning & Performance Design,Basic partitioning and manual tuning on large tables.,2,Developing
+Data Engineering,Data Storage & Warehousing,Storage Scalability & Cost,Manual management of growing storage costs and cold data.,2,Developing
+Data Engineering,Data Storage & Warehousing,Access Control & Permissions,Role-based access partially implemented.,2,Developing
+Data Engineering,Data Storage & Warehousing,Data Lineage & Documentation,Partial lineage tracked manually or informally.,2,Developing
+Data Engineering,Data Storage & Warehousing,Reliability & SLAs,SLAs informally defined; monitored manually.,2,Developing
+Data Engineering,Data Storage & Warehousing,Environment Management,Dev environments exist but are inconsistently used.,2,Developing
+Data Engineering,Data Storage & Warehousing,Tooling & Observability,Manual monitoring through dashboards; alerts not consistent.,2,Developing
+Data Engineering,Data Storage & Warehousing,Governance & Compliance,PII tagging done manually; compliance policies partially implemented.,2,Developing
+Data Engineering,Data Quality & Governance,Data Quality Monitoring,Manual or ad hoc checks exist on critical datasets.,2,Developing
+Data Engineering,Data Quality & Governance,Data Validation & Testing,Some unit tests or checks defined manually in SQL or code.,2,Developing
+Data Engineering,Data Quality & Governance,Ownership & Stewardship,Informal or team-based ownership. Issues resolved case-by-case.,2,Developing
+Data Engineering,Data Quality & Governance,Cataloging & Discoverability,Spreadsheet-based or tool-specific documentation.,2,Developing
+Data Engineering,Data Quality & Governance,Data Lineage,Partial lineage tracking via documentation or tool-specific graphs.,2,Developing
+Data Engineering,Data Quality & Governance,Master & Reference Data Management,"Some central reference tables exist, but usage is fragmented.",2,Developing
+Data Engineering,Data Quality & Governance,Access Control & Classification,Basic RBAC or group-based access. PII flagged manually.,2,Developing
+Data Engineering,Data Quality & Governance,Policy Enforcement & Compliance,"Basic privacy policies defined, but not enforced via tooling.",2,Developing
+Data Engineering,Data Quality & Governance,Change Management & Contracts,Informal approval of changes; limited rollback procedures.,2,Developing
+Data Engineering,Data Quality & Governance,Incident Management & RCA,"Issues logged manually, triaged informally.",2,Developing
+Data Engineering,Data Modeling & Schema Design,Modeling Approach & Standards,Informal standards or templates reused inconsistently.,2,Developing
+Data Engineering,Data Modeling & Schema Design,Semantic Consistency,"Some terms are defined, but inconsistently applied.",2,Developing
+Data Engineering,Data Modeling & Schema Design,Collaboration & Requirements,Some collaboration with analysts; not standardized.,2,Developing
+Data Engineering,Data Modeling & Schema Design,Model Versioning & Change Mgmt,Manual versioning and documentation of changes.,2,Developing
+Data Engineering,Data Modeling & Schema Design,Documentation & Discoverability,Some tables or fields manually documented in spreadsheets.,2,Developing
+Data Engineering,Data Modeling & Schema Design,Schema Enforcement & Contracts,Schema expectations loosely defined; issues caught post-facto.,2,Developing
+Data Engineering,Data Modeling & Schema Design,Normalization & Denormalization,Ad hoc tradeoffs made based on performance or convenience.,2,Developing
+Data Engineering,Data Modeling & Schema Design,Tooling & Frameworks,Frameworks like dbt or hand-written DAGs used inconsistently.,2,Developing
+Data Engineering,Data Modeling & Schema Design,Testing & Data Quality,Manual validation or basic QA applied to key tables.,2,Developing
+Data Engineering,Data Modeling & Schema Design,Usability for Analytics,Tables used inconsistently; naming unclear or undocumented.,2,Developing
+Data Engineering,Metadata Management,Types & Scope of Metadata,"Technical metadata partially collected (e.g., schemas, table sizes). Business metadata is sparse or informal.",2,Developing
+Data Engineering,Metadata Management,Metadata Collection Process,"Ad hoc or scheduled updates to metadata, often tied to manual processes.",2,Developing
+Data Engineering,Metadata Management,Tooling & Platform Integration,Spreadsheet-based documentation or fragmented tooling.,2,Developing
+Data Engineering,Metadata Management,Search & Discovery,Limited or fragmented searchability; discovery possible within isolated tools.,2,Developing
+Data Engineering,Metadata Management,Documentation & Descriptions,Some fields or tables documented manually; not enforced or standardized.,2,Developing
+Data Engineering,Metadata Management,Data Lineage,"Partial lineage captured (e.g., table-level in transformation tools).",2,Developing
+Data Engineering,Metadata Management,Stewardship & Ownership,Informal ownership or team-based assumptions.,2,Developing
+Data Engineering,Metadata Management,"Policy, Classification & Governance","Some datasets labeled manually (e.g., “PII”), but not enforced.",2,Developing
+Data Engineering,Metadata Management,Automation & Self-Service,"Limited automation (e.g., doc generation via dbt, Airflow metadata parsing).",2,Developing
+Data Engineering,Metadata Management,Cultural Adoption,Growing awareness but inconsistent engagement.,2,Developing
+Data Engineering,Data Security & Privacy,Access Control & Authorization,Basic RBAC in place for critical systems.,2,Developing
+Data Engineering,Data Security & Privacy,Data Classification,"Some datasets manually tagged (e.g., PII).",2,Developing
+Data Engineering,Data Security & Privacy,Encryption & Masking,Encryption in transit (TLS); partial encryption at rest.,2,Developing
+Data Engineering,Data Security & Privacy,Audit Logging & Monitoring,Logs exist for some systems; manually checked.,2,Developing
+Data Engineering,Data Security & Privacy,Privacy by Design,Developers are aware of privacy basics; not formally enforced.,2,Developing
+Data Engineering,Data Security & Privacy,Subject Rights & Consent,Ad hoc manual responses to access or deletion requests.,2,Developing
+Data Engineering,Data Security & Privacy,Vendor & Third-Party Risk,"Some contracts reference data protection, but not consistently reviewed.",2,Developing
+Data Engineering,Data Security & Privacy,Secure Development & Deployment,"Static security scanning (e.g., secrets detection) used occasionally.",2,Developing
+Data Engineering,Data Security & Privacy,Incident Response Readiness,Basic manual procedures documented.,2,Developing
+Data Engineering,Data Security & Privacy,Compliance & Regulatory Readiness,"Aware of regulations (e.g., GDPR, CCPA); compliance efforts in progress.",2,Developing
+Data Engineering,Data Security & Privacy,Security & Privacy Culture,Developers and engineers aware of basic data handling practices.,2,Developing
+Data Engineering,Performance Optimization,Pipeline & Job Performance,Manual monitoring of runtime; optimization only after failures.,2,Developing
+Data Engineering,Performance Optimization,Query Performance Tuning,Performance is improved manually when issues arise.,2,Developing
+Data Engineering,Performance Optimization,Partitioning & Indexing,"Basic partitioning on ingestion (e.g., by date); no formal policy.",2,Developing
+Data Engineering,Performance Optimization,Materializations & Caching,Some dashboards or reports use materialized tables or views.,2,Developing
+Data Engineering,Performance Optimization,Data Volume Management,Growth tracked informally; purging or archiving done manually.,2,Developing
+Data Engineering,Performance Optimization,Compute Resource Management,Jobs sometimes fail due to contention or quota overrun.,2,Developing
+Data Engineering,Performance Optimization,Performance Testing,Performance manually tested before major releases.,2,Developing
+Data Engineering,Performance Optimization,Observability & Alerting,Ad hoc alerts for job failures only.,2,Developing
+Data Engineering,Performance Optimization,Optimization Ownership,Engineers respond reactively; some tuning is expected.,2,Developing
+Data Engineering,Performance Optimization,Feedback & End-User Experience,Some feedback is collected but not acted on.,2,Developing
+Data Engineering,Scalability & Infrastructure,Elasticity & Auto-Scaling,Some workloads manually scaled based on known patterns.,2,Developing
+Data Engineering,Scalability & Infrastructure,Modular Architecture,Partial modularization of pipeline stages.,2,Developing
+Data Engineering,Scalability & Infrastructure,Multi-Environment Management,Separate environments for dev and prod; not always consistent.,2,Developing
+Data Engineering,Scalability & Infrastructure,Infrastructure as Code (IaC),"Some infra (e.g., compute, storage) defined with IaC tools (e.g., Terraform).",2,Developing
+Data Engineering,Scalability & Infrastructure,Vendor Lock-In & Portability,Vendor features used selectively; fallback options undocumented.,2,Developing
+Data Engineering,Scalability & Infrastructure,Throughput & Latency Handling,Minor spikes handled manually or via reactive alerts.,2,Developing
+Data Engineering,Scalability & Infrastructure,Cost Optimization at Scale,Monthly cloud bills reviewed manually.,2,Developing
+Data Engineering,Scalability & Infrastructure,High Availability & Redundancy,Backups exist; failover plans are manual or untested.,2,Developing
+Data Engineering,Scalability & Infrastructure,Multi-Tenancy / Multi-Team Scale,"Some shared infrastructure exists, but conflicts and bottlenecks occur.",2,Developing
+Data Engineering,Scalability & Infrastructure,Scalability Testing & Planning,Manual assessments done during capacity issues.,2,Developing
+Data Engineering,Automation & Workflow Orchestration,Workflow Orchestration Tooling,"Basic orchestration using cron or simple DAGs (e.g., Airflow, Prefect) for key pipelines.",2,Developing
+Data Engineering,Automation & Workflow Orchestration,Triggering & Scheduling,Some jobs triggered based on upstream outputs or file arrivals.,2,Developing
+Data Engineering,Automation & Workflow Orchestration,Monitoring & Alerting,Dashboards or Slack alerts on job failure exist; no formal escalation path.,2,Developing
+Data Engineering,Automation & Workflow Orchestration,Failure Handling & Retries,Retries are hard-coded or inconsistently applied across jobs.,2,Developing
+Data Engineering,Automation & Workflow Orchestration,Parameterization & Reuse,Some jobs allow variable inputs via configs or environment files.,2,Developing
+Data Engineering,Automation & Workflow Orchestration,Documentation & Discoverability,Limited documentation in wikis or code comments.,2,Developing
+Data Engineering,Automation & Workflow Orchestration,Secrets & Credential Management,Environment variables or basic secret stores used.,2,Developing
+Data Engineering,Automation & Workflow Orchestration,Idempotency & State Management,Partial idempotency through checkpointing or manual metadata.,2,Developing
+Data Engineering,Automation & Workflow Orchestration,Multi-Tenant Workflow Support,"Some separation by project or team, but no formal boundaries or access control.",2,Developing
+Data Engineering,Automation & Workflow Orchestration,CI/CD & Workflow Testing,Workflow changes peer-reviewed but not always tested.,2,Developing
+Data Engineering,Observability & Monitoring,Pipeline Health Monitoring,Some pipelines have basic success/failure logging.,2,Developing
+Data Engineering,Observability & Monitoring,Data Quality Monitoring,Manual checks or reactive testing in place.,2,Developing
+Data Engineering,Observability & Monitoring,Infrastructure Resource Monitoring,Basic dashboards for CPU/memory; manual interventions.,2,Developing
+Data Engineering,Observability & Monitoring,Logging Practices,"Logging added for some jobs or services, but lacking context.",2,Developing
+Data Engineering,Observability & Monitoring,Alerting & Escalation,Alerts set up for some jobs; alerts may be missed.,2,Developing
+Data Engineering,Observability & Monitoring,Lineage & Traceability,Manual documentation or lineage in isolated systems.,2,Developing
+Data Engineering,Observability & Monitoring,Dashboards & Observability Tools,Individual dashboards exist per team or system.,2,Developing
+Data Engineering,Observability & Monitoring,SLAs/SLOs for Data Pipelines,Informal SLAs exist; breaches tracked manually or not at all.,2,Developing
+Data Engineering,Observability & Monitoring,Incident Management,"Issues tracked in informal tools (e.g., JIRA, spreadsheets).",2,Developing
+Data Engineering,Observability & Monitoring,Proactive Monitoring / Anomaly Detection,Manual reviews of outliers or trends exist but are slow.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Backup Coverage,"Backups exist for some systems (e.g., production database); not comprehensive.",2,Developing
+Data Engineering,Disaster Recovery & Backup,Frequency & Retention,"Daily or weekly backups for some assets; limited retention (e.g., 7 days).",2,Developing
+Data Engineering,Disaster Recovery & Backup,Monitoring & Validation,Manual spot-checks performed infrequently.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Disaster Recovery Planning,Partial documentation exists but rarely updated or tested.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Recovery Testing / Drills,Informal or partial recovery attempted occasionally.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Infrastructure Resilience,"Some HA built-in (e.g., read replicas); not reliable under real load.",2,Developing
+Data Engineering,Disaster Recovery & Backup,Data Versioning & Time Travel,Manual snapshots or exports used for limited versioning.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Access Controls for Backups,Access limited to ops or admin team but not tracked.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Recovery Time (RTO),Recovery possible in hours but not measured or rehearsed.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Recovery Point (RPO),Some systems have daily RPOs; others undocumented.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Third-Party Dependency Coverage,Some SLAs known; no control or fallback strategy in place.,2,Developing
+Data Engineering,Disaster Recovery & Backup,Post-Recovery Validation,Manual validation by engineers after recovery.,2,Developing
+Data Engineering,Self-Service & Democratization,Data Discoverability,Some documentation exists in siloed tools or teams.,2,Developing
+Data Engineering,Self-Service & Democratization,Access & Permissions,"Some role-based access controls exist, but inconsistent across systems.",2,Developing
+Data Engineering,Self-Service & Democratization,BI & Self-Service Tooling,Some departments have limited self-service BI tooling.,2,Developing
+Data Engineering,Self-Service & Democratization,Data Literacy & Enablement,Occasional training or onboarding by analysts.,2,Developing
+Data Engineering,Self-Service & Democratization,Metric Standardization,"Basic alignment of core metrics, but no source of truth.",2,Developing
+Data Engineering,Self-Service & Democratization,Request Workflows,Some teams use request forms or tickets but backlog is long.,2,Developing
+Data Engineering,Self-Service & Democratization,Data Access Governance,Manual checks on sensitive datasets; some access restrictions.,2,Developing
+Data Engineering,Self-Service & Democratization,Integration with Operational Tools,Limited exports or spreadsheet-based workflows.,2,Developing
+Data Engineering,Self-Service & Democratization,Monitoring Usage & Feedback,Occasional feedback is collected informally.,2,Developing
+Data Engineering,Integration & APIs,System Integration,"Some scheduled/batch pipelines exist, often point-to-point; documentation may be lacking.",2,Developing
+Data Engineering,Integration & APIs,API Design & Exposure,"A few ad hoc internal APIs exist, often built by engineers per need.",2,Developing
+Data Engineering,Integration & APIs,Inbound API Usage,"External APIs used in ingestion pipelines, but error-handling and change detection are inconsistent.",2,Developing
+Data Engineering,Integration & APIs,Outbound Data Activation,Outbound syncs done manually or via scripts; high dependency on engineers.,2,Developing
+Data Engineering,Integration & APIs,Monitoring & Reliability,Basic error logs reviewed reactively; no real-time alerting.,2,Developing
+Data Engineering,Integration & APIs,Security & Access Control,Secrets stored in environment files or password managers; access permissions loosely enforced.,2,Developing
+Data Engineering,Integration & APIs,Documentation & Governance,"Some internal wikis or comments exist, but not actively maintained.",2,Developing
+Data Engineering,Cost Management,Cost Visibility & Reporting,Partial awareness; basic cost reports generated manually or ad hoc.,2,Developing
+Data Engineering,Cost Management,Cost Attribution,Basic tagging for some resources; attribution inconsistent.,2,Developing
+Data Engineering,Cost Management,Budget Governance & Controls,Manual reviews and approval for large purchases or new tools.,2,Developing
+Data Engineering,Cost Management,Monitoring & Alerts,Alerts set manually; often reactive and delayed.,2,Developing
+Data Engineering,Cost Management,Optimization Practices,Occasional clean-ups or audits initiated manually.,2,Developing
+Data Engineering,Cost Management,Forecasting & Planning,"Teams estimate costs before new projects, but accuracy is low.",2,Developing
+Data Engineering,Cost Management,Cultural Awareness,Some developers are conscious of costs; no formal education.,2,Developing
+Data Engineering,Cost Management,Tools & Automation,Cost Explorer or cloud console used manually.,2,Developing
+Data Engineering,Data Ingestion,Ingestion Framework & Architecture,"Unified tooling (e.g., Airbyte, Kafka) adopted across multiple teams.",3,Defined & Repeatable
+Data Engineering,Data Ingestion,Data Source Coverage,"Broad source coverage, including key SaaS apps and internal systems.",3,Defined & Repeatable
+Data Engineering,Data Ingestion,Change Data Capture (CDC),"CDC supported for most key sources (e.g., Fivetran, Debezium); schema drift manually handled.",3,Defined & Repeatable
+Data Engineering,Data Ingestion,Monitoring & Alerting,"Automated monitoring and alerting (e.g., Airflow, Datadog) with email or Slack notifications.",3,Defined & Repeatable
+Data Engineering,Data Ingestion,Validation & Quality Checks,Row-level and schema validation implemented for major pipelines.,3,Defined & Repeatable
+Data Engineering,Data Ingestion,Metadata & Lineage,"Lineage tracked using tools like dbt, Marquez, or internal metadata store.",3,Defined & Repeatable
+Data Engineering,Data Ingestion,Security & Compliance,"Secure access patterns, IAM roles, and PII masking implemented for ingestion.",3,Defined & Repeatable
+Data Engineering,Data Ingestion,Operational Maturity,Ingestion is templated; onboarding new sources takes days.,3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Architecture & Design,Centralized warehouse/lakehouse design adopted across teams.,3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Schema Management & Modeling,"Standardized modeling approach (e.g., dbt, Data Vault) adopted org-wide.",3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Partitioning & Performance Design,"Common performance optimizations applied (e.g., clustering, materialized views).",3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Storage Scalability & Cost,Storage monitoring and data tiering practices in place.,3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Access Control & Permissions,"Fine-grained access (RBAC, row-level security) consistently enforced.",3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Data Lineage & Documentation,"Lineage and metadata managed using tools like dbt, Amundsen, or in-house solutions.",3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Reliability & SLAs,SLAs defined for key datasets; automated freshness checks exist.,3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Environment Management,Separate environments (dev/staging/prod); changes deployed via manual pipelines.,3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Tooling & Observability,Automated monitoring of performance and availability for key tables.,3,Defined & Repeatable
+Data Engineering,Data Storage & Warehousing,Governance & Compliance,Sensitive data managed with defined rules and audit logs.,3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Data Quality Monitoring,"Automated checks (nulls, duplicates, schema) on key tables. Failures raise alerts.",3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Data Validation & Testing,"dbt tests, assertions, or expectations implemented across curated layers.",3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Ownership & Stewardship,Owners/stewards assigned for most domains. Defined workflows for triaging issues.,3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Cataloging & Discoverability,"Cataloging platform exists (e.g., Alation, DataHub). Descriptions added for most datasets.",3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Data Lineage,Table-level lineage viewable by analysts and engineers.,3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Master & Reference Data Management,Shared reference datasets standardized across domains.,3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Access Control & Classification,Row/column-level access enforced on sensitive datasets. Classification rules in use.,3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Policy Enforcement & Compliance,"Policies formalized (e.g., retention, sharing, masking) and partially automated.",3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Change Management & Contracts,Data producers notify consumers before changes. Data contracts emerging.,3,Defined & Repeatable
+Data Engineering,Data Quality & Governance,Incident Management & RCA,Known issues are tracked and reported; post-mortems documented.,3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Modeling Approach & Standards,"Common modeling patterns (e.g., star schema) adopted and documented.",3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Semantic Consistency,"Core metrics and terms (e.g., “Active User”) defined and used consistently across reports.",3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Collaboration & Requirements,Requirements are gathered systematically; stakeholders participate in model reviews.,3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Model Versioning & Change Mgmt,"Git version control, PRs, and changelogs used for all models.",3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Documentation & Discoverability,Descriptions and lineage included in data catalog for curated models.,3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Schema Enforcement & Contracts,"Schema is enforced with validations (e.g., dbt tests, JSON schemas, assertions).",3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Normalization & Denormalization,Clear guidance exists on when to normalize or denormalize data.,3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Tooling & Frameworks,"Standardized tooling (e.g., dbt, LookML) used for all production models.",3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Testing & Data Quality,Model testing integrated into CI/CD with assertions and freshness checks.,3,Defined & Repeatable
+Data Engineering,Data Modeling & Schema Design,Usability for Analytics,"Modeled data is intuitive, well-documented, and reused across analytics projects.",3,Defined & Repeatable
+Data Engineering,Metadata Management,Types & Scope of Metadata,"Technical, business, and lineage metadata actively maintained for key data assets.",3,Defined & Repeatable
+Data Engineering,Metadata Management,Metadata Collection Process,"Metadata collected automatically via integration with pipelines (e.g., dbt, Airflow).",3,Defined & Repeatable
+Data Engineering,Metadata Management,Tooling & Platform Integration,"Central metadata platform (e.g., DataHub, Alation) adopted for curated data assets.",3,Defined & Repeatable
+Data Engineering,Metadata Management,Search & Discovery,Searchable metadata catalog exists for key datasets; supports table/column/metric-level discovery.,3,Defined & Repeatable
+Data Engineering,Metadata Management,Documentation & Descriptions,"Business and technical metadata (descriptions, metric logic, etc.) defined and published for curated assets.",3,Defined & Repeatable
+Data Engineering,Metadata Management,Data Lineage,Table-level lineage is captured and visualized in a metadata platform.,3,Defined & Repeatable
+Data Engineering,Metadata Management,Stewardship & Ownership,Owners assigned for critical datasets; contact info discoverable.,3,Defined & Repeatable
+Data Engineering,Metadata Management,"Policy, Classification & Governance","Sensitivity classifications (PII, PCI, etc.) and retention rules are tagged in metadata.",3,Defined & Repeatable
+Data Engineering,Metadata Management,Automation & Self-Service,"Metadata used for documentation, scheduling, and impact analysis in selected workflows.",3,Defined & Repeatable
+Data Engineering,Metadata Management,Cultural Adoption,Analysts and engineers rely on the catalog for discovery and documentation.,3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Access Control & Authorization,Centralized identity management with RBAC for all systems.,3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Data Classification,"Formal data classification policy (PII, PHI, PCI, public, internal) adopted.",3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Encryption & Masking,Full encryption at rest and in transit for sensitive data.,3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Audit Logging & Monitoring,Logging of data access and system events is enabled for critical systems.,3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Privacy by Design,Privacy considerations included in requirements for data systems.,3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Subject Rights & Consent,"Defined workflows for deletion, rectification, and access per regulation.",3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Vendor & Third-Party Risk,Third-party DPAs in place and tracked; vendor risk assessments performed.,3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Secure Development & Deployment,"SAST/DAST tools used; secret management via secure vaults (e.g., AWS KMS, HashiCorp Vault).",3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Incident Response Readiness,Incident response playbooks defined and personnel trained.,3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Compliance & Regulatory Readiness,Compliance controls implemented and reviewed; designated data privacy officer exists.,3,Defined & Repeatable
+Data Engineering,Data Security & Privacy,Security & Privacy Culture,Security and privacy training is required for data team members.,3,Defined & Repeatable
+Data Engineering,Performance Optimization,Pipeline & Job Performance,Runtime is tracked; high-cost or long-running jobs are regularly reviewed.,3,Defined & Repeatable
+Data Engineering,Performance Optimization,Query Performance Tuning,"Query plans are reviewed; tuning strategies (e.g., CTEs, filters, joins) applied systematically.",3,Defined & Repeatable
+Data Engineering,Performance Optimization,Partitioning & Indexing,Partitioning/indexing aligned with query patterns; clustered data sources.,3,Defined & Repeatable
+Data Engineering,Performance Optimization,Materializations & Caching,"Materializations managed via transformation tools (e.g., dbt, ETL cache).",3,Defined & Repeatable
+Data Engineering,Performance Optimization,Data Volume Management,Downsampling or archiving used in older layers; storage monitored.,3,Defined & Repeatable
+Data Engineering,Performance Optimization,Compute Resource Management,Resource usage monitored via dashboards; size/configuration adjusted as needed.,3,Defined & Repeatable
+Data Engineering,Performance Optimization,Performance Testing,Benchmarks are defined and evaluated periodically.,3,Defined & Repeatable
+Data Engineering,Performance Optimization,Observability & Alerting,"Dashboards for latency, throughput, failures are available and reviewed.",3,Defined & Repeatable
+Data Engineering,Performance Optimization,Optimization Ownership,Clear ownership for pipelines and queries; performance tracked as OKR or KPI.,3,Defined & Repeatable
+Data Engineering,Performance Optimization,Feedback & End-User Experience,"User feedback informs optimization priorities (e.g., slow dashboards get fixed).",3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Elasticity & Auto-Scaling,"Auto-scaling enabled for key services (e.g., cloud data warehouses).",3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Modular Architecture,"Services decoupled via message queues or orchestration layers (e.g., Airflow, Kafka).",3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Multi-Environment Management,Isolated environments for dev/staging/prod with IaC support.,3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Infrastructure as Code (IaC),Full-stack provisioning via IaC with versioning and code reviews.,3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Vendor Lock-In & Portability,Architecture reviewed for portability; core pipelines avoid vendor lock-in.,3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Throughput & Latency Handling,Load handling tested; performance baseline defined per pipeline.,3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Cost Optimization at Scale,Cost dashboards exist; inefficient jobs or services are reviewed quarterly.,3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,High Availability & Redundancy,Redundant systems and failover procedures in place for key services.,3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Multi-Tenancy / Multi-Team Scale,"Teams have isolated resources, schemas, or namespaces; quotas partially enforced.",3,Defined & Repeatable
+Data Engineering,Scalability & Infrastructure,Scalability Testing & Planning,Growth modeling and provisioning planning conducted annually or quarterly.,3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Workflow Orchestration Tooling,Standardized orchestration platform in place with documented DAGs.,3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Triggering & Scheduling,"Mixed triggering: time-based, event-based, and conditional; centralized schedule mgmt.",3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Monitoring & Alerting,Alerts sent for failed/delayed jobs; monitored by team during work hours.,3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Failure Handling & Retries,Retry logic exists for transient issues; failed pipelines can restart from point of failure.,3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Parameterization & Reuse,"Workflows are reusable with templating, macros, or parameterization.",3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Documentation & Discoverability,Workflows are documented in orchestration tools or data catalogs.,3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Secrets & Credential Management,Vaults or cloud secret managers integrated with orchestration.,3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Idempotency & State Management,All jobs are idempotent or resumable; state tracked via job metadata.,3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,Multi-Tenant Workflow Support,Workflows organized by domain/team with shared platform governance.,3,Defined & Repeatable
+Data Engineering,Automation & Workflow Orchestration,CI/CD & Workflow Testing,Workflows validated in dev/staging environments before production deployment.,3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Pipeline Health Monitoring,"All critical pipelines have status tracking, including success/failure and duration.",3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Data Quality Monitoring,"Automated validation on known failure points (e.g., null checks, uniqueness).",3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Infrastructure Resource Monitoring,Centralized resource monitoring with trend analysis.,3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Logging Practices,"Structured, centralized logging in place for pipelines and services.",3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Alerting & Escalation,Alerts defined for key workflows with known escalation contacts.,3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Lineage & Traceability,"Lineage tracked for major pipelines using metadata tools (e.g., dbt, Collibra).",3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Dashboards & Observability Tools,Central dashboard for pipeline monitoring and data availability status.,3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,SLAs/SLOs for Data Pipelines,SLAs defined for key data products; monitored with time-to-availability.,3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Incident Management,Tickets and RCAs created for major incidents; resolution time tracked.,3,Defined & Repeatable
+Data Engineering,Observability & Monitoring,Proactive Monitoring / Anomaly Detection,Some automated anomaly detection in data and system performance.,3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Backup Coverage,All critical systems and datasets backed up regularly.,3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Frequency & Retention,"Defined backup frequencies and retention per system (e.g., 30–90 days).",3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Monitoring & Validation,Backup jobs monitored; alerts on failure; basic integrity checks.,3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Disaster Recovery Planning,DR plan documented with responsibilities and timeframes defined.,3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Recovery Testing / Drills,Recovery tests executed annually on selected systems.,3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Infrastructure Resilience,High availability for core components; failover is mostly manual.,3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Data Versioning & Time Travel,"Data versioning enabled in some systems (e.g., time travel, snapshot tables).",3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Access Controls for Backups,Access to backups is role-based; some logs/audits captured.,3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Recovery Time (RTO),"Defined RTO targets (e.g., < 4 hours) and achievable in dry runs.",3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Recovery Point (RPO),"RPO defined and aligned with data importance (e.g., 1–24 hours).",3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Third-Party Dependency Coverage,Vendor SLAs reviewed and documented; limited fallback options exist.,3,Defined & Repeatable
+Data Engineering,Disaster Recovery & Backup,Post-Recovery Validation,"Checklists followed for pipeline, table, and report validation.",3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,Data Discoverability,Centralized catalog or glossary exists but lacks full coverage.,3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,Access & Permissions,Access is role-based and managed via tickets or workflow.,3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,BI & Self-Service Tooling,Core dashboards and curated datasets available in BI tools.,3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,Data Literacy & Enablement,Documentation and training exist for common KPIs and datasets.,3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,Metric Standardization,KPI definitions documented and reused across teams.,3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,Request Workflows,Prioritized intake workflows exist; backlog reviewed regularly.,3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,Data Access Governance,Sensitive data is tagged and access-controlled; auditing is possible.,3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,Integration with Operational Tools,Data can be exported from BI tools or queried via SQL.,3,Defined & Repeatable
+Data Engineering,Self-Service & Democratization,Monitoring Usage & Feedback,Usage of dashboards is monitored; feedback is encouraged.,3,Defined & Repeatable
+Data Engineering,Integration & APIs,System Integration,"Standardized connectors or ETL tools (e.g., Airbyte, Fivetran) used; integration patterns documented.",3,Defined & Repeatable
+Data Engineering,Integration & APIs,API Design & Exposure,"Internal APIs offer curated datasets or features; some standards used (RESTful, authentication).",3,Defined & Repeatable
+Data Engineering,Integration & APIs,Inbound API Usage,External APIs are integrated into scheduled or event-driven ingestion pipelines; common retry logic applied.,3,Defined & Repeatable
+Data Engineering,Integration & APIs,Outbound Data Activation,Some reverse ETL or push-based APIs used to sync enriched data into business tools.,3,Defined & Repeatable
+Data Engineering,Integration & APIs,Monitoring & Reliability,Scheduled pipeline failures and API response issues monitored with alerts; SLAs defined for some systems.,3,Defined & Repeatable
+Data Engineering,Integration & APIs,Security & Access Control,"Secrets rotated and stored in vaults (e.g., AWS Secrets Manager, HashiCorp Vault); token scopes defined.",3,Defined & Repeatable
+Data Engineering,Integration & APIs,Documentation & Governance,Integration flows and APIs documented in shared repositories or portals; ownership documented.,3,Defined & Repeatable
+Data Engineering,Cost Management,Cost Visibility & Reporting,Regular reporting by environment or service; leadership reviews costs periodically.,3,Defined & Repeatable
+Data Engineering,Cost Management,Cost Attribution,Costs are tagged and mapped to business units or initiatives; used for internal analysis.,3,Defined & Repeatable
+Data Engineering,Cost Management,Budget Governance & Controls,Teams operate under soft budgets with tracked spend.,3,Defined & Repeatable
+Data Engineering,Cost Management,Monitoring & Alerts,Cost spikes monitored daily/weekly; alerts configured for critical resources.,3,Defined & Repeatable
+Data Engineering,Cost Management,Optimization Practices,Inefficient queries and storage patterns identified and addressed during reviews.,3,Defined & Repeatable
+Data Engineering,Cost Management,Forecasting & Planning,Forecasting based on usage trends and project scope; reviewed quarterly.,3,Defined & Repeatable
+Data Engineering,Cost Management,Cultural Awareness,Cost is discussed during reviews and planning; ownership begins to emerge.,3,Defined & Repeatable
+Data Engineering,Cost Management,Tools & Automation,Dashboards or reports built to monitor top-line metrics.,3,Defined & Repeatable
+Data Engineering,Data Ingestion,Ingestion Framework & Architecture,Framework is standardized org-wide; ingestion workflows are templatized and automated.,4,Managed & Optimized
+Data Engineering,Data Ingestion,Data Source Coverage,Ingestion covers 90%+ of business-critical systems with known gaps tracked.,4,Managed & Optimized
+Data Engineering,Data Ingestion,Change Data Capture (CDC),"Schema changes are detected, versioned, and handled gracefully; lineage maintained.",4,Managed & Optimized
+Data Engineering,Data Ingestion,Monitoring & Alerting,SLA/SLOs tracked; alerts include root-cause hints; teams receive daily observability reports.,4,Managed & Optimized
+Data Engineering,Data Ingestion,Validation & Quality Checks,Validation rules are version-controlled and centrally managed; bad records quarantined.,4,Managed & Optimized
+Data Engineering,Data Ingestion,Metadata & Lineage,Metadata cataloged and searchable; ingestion status visible to all teams.,4,Managed & Optimized
+Data Engineering,Data Ingestion,Security & Compliance,Compliance auditing integrated into pipelines; data governance tools support tracking.,4,Managed & Optimized
+Data Engineering,Data Ingestion,Operational Maturity,Central team owns ingestion framework; onboarding SLAs defined; config stored in Git.,4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Architecture & Design,"Tiered architecture in place (raw, curated, modeled) with data lifecycle separation.",4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Schema Management & Modeling,"Schemas are versioned, documented, and integrated with CI/CD.",4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Partitioning & Performance Design,"Performance is proactively managed via query profiling, usage monitoring, and refactoring.",4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Storage Scalability & Cost,Archived and cold data managed automatically; usage monitored for cost optimization.,4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Access Control & Permissions,Auditable access logs exist; policies reviewed periodically and documented.,4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Data Lineage & Documentation,Real-time lineage available and tied to monitoring and alerting.,4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Reliability & SLAs,Alerts for SLA violations and data freshness; root cause analysis integrated.,4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Environment Management,CI/CD workflows manage environment changes; rollback and test capabilities exist.,4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Tooling & Observability,"Central observability layer in place (e.g., Monte Carlo, DataDog); alerts routed to owners.",4,Managed & Optimized
+Data Engineering,Data Storage & Warehousing,Governance & Compliance,Governance platform in place with regular compliance checks and automated tagging.,4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Data Quality Monitoring,Comprehensive quality rules across pipelines. Alerts routed to owners. Root cause tracked.,4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Data Validation & Testing,CI/CD-integrated testing; regressions blocked before deploy.,4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Ownership & Stewardship,Owners accountable via SLAs. Data quality KPIs reported.,4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Cataloging & Discoverability,Automatically ingested metadata; tagging and popularity scores.,4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Data Lineage,Column-level lineage with transformations and dependencies traceable.,4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Master & Reference Data Management,Version-controlled MDM pipelines with auditability.,4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Access Control & Classification,Automated masking and tagging; access reviews conducted routinely.,4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Policy Enforcement & Compliance,"Compliance tooling (e.g., GDPR audit logs, PII scanners) in active use.",4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Change Management & Contracts,"Contract registry, versioning, and CI validation in place.",4,Managed & Optimized
+Data Engineering,Data Quality & Governance,Incident Management & RCA,Standard RCA workflow in place; metrics used to track mean time to detection and resolution.,4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Modeling Approach & Standards,Modeling standards enforced with code review and automation.,4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Semantic Consistency,"Shared semantic layer or metric store (e.g., LookML, dbt Metrics) in place.",4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Collaboration & Requirements,"Agile and iterative collaboration between engineers, analysts, and business SMEs.",4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Model Versioning & Change Mgmt,CI/CD pipelines validate schema changes and downstream impacts.,4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Documentation & Discoverability,"Automated documentation from source code (e.g., dbt docs); searchable catalog used by analysts.",4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Schema Enforcement & Contracts,Schema contracts with producers/consumers in place; violations alert and block deployment.,4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Normalization & Denormalization,Tradeoffs are quantified using query cost/performance benchmarks.,4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Tooling & Frameworks,"Tooling integrated into orchestration, testing, CI/CD, and documentation pipelines.",4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Testing & Data Quality,"Automated anomaly detection, QA dashboards, and failure alerting in place.",4,Managed & Optimized
+Data Engineering,Data Modeling & Schema Design,Usability for Analytics,Analysts self-serve with high confidence; low analyst-to-data engineering support ratio.,4,Managed & Optimized
+Data Engineering,Metadata Management,Types & Scope of Metadata,"Metadata coverage extended to quality, freshness, usage, ownership, sensitivity.",4,Managed & Optimized
+Data Engineering,Metadata Management,Metadata Collection Process,Metadata updates embedded in CI/CD or orchestration pipelines.,4,Managed & Optimized
+Data Engineering,Metadata Management,Tooling & Platform Integration,"Metadata platform is integrated with data warehouse, orchestration, modeling, and BI tools.",4,Managed & Optimized
+Data Engineering,Metadata Management,Search & Discovery,"Rich search experience with filters, tags, popularity metrics, and user ratings.",4,Managed & Optimized
+Data Engineering,Metadata Management,Documentation & Descriptions,Descriptions enforced via templates or linter in CI/CD. Ownership and update dates visible.,4,Managed & Optimized
+Data Engineering,Metadata Management,Data Lineage,Column-level lineage from source to dashboard is accessible and integrated with impact analysis.,4,Managed & Optimized
+Data Engineering,Metadata Management,Stewardship & Ownership,Data stewardship roles formalized; metadata quality tracked via KPIs.,4,Managed & Optimized
+Data Engineering,Metadata Management,"Policy, Classification & Governance","Governance rules enforced via access controls, masking, and monitoring in metadata platform.",4,Managed & Optimized
+Data Engineering,Metadata Management,Automation & Self-Service,"Metadata powers dynamic orchestration, schema drift detection, and data quality tests.",4,Managed & Optimized
+Data Engineering,Metadata Management,Cultural Adoption,Business and technical users contribute to and maintain metadata collaboratively.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Access Control & Authorization,Periodic access reviews and automated provisioning/deprovisioning.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Data Classification,Automated classification via metadata scanning or tagging pipelines.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Encryption & Masking,Data masking or tokenization for production-like and analytics environments.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Audit Logging & Monitoring,Logs are analyzed regularly; anomalies trigger alerts and investigations.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Privacy by Design,Privacy impact assessments conducted during new system or feature design.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Subject Rights & Consent,Automated tooling in place to manage consent and subject rights across systems.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Vendor & Third-Party Risk,Periodic security assessments of vendors; secure data-sharing practices enforced.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Secure Development & Deployment,Security gate checks in CI/CD pipeline; policies enforce patching and version pinning.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Incident Response Readiness,Incident simulations conducted regularly; post-mortems drive improvements.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Compliance & Regulatory Readiness,Compliance tracked via formal audits and risk assessments.,4,Managed & Optimized
+Data Engineering,Data Security & Privacy,Security & Privacy Culture,Security champions embedded in teams; KPIs include privacy posture.,4,Managed & Optimized
+Data Engineering,Performance Optimization,Pipeline & Job Performance,SLAs defined for job performance; optimizations prioritized in backlog.,4,Managed & Optimized
+Data Engineering,Performance Optimization,Query Performance Tuning,Query optimization is part of review/deploy process; tooling supports linting or cost checks.,4,Managed & Optimized
+Data Engineering,Performance Optimization,Partitioning & Indexing,Partitioning/indexing evaluated with profiling tools; maintained during lifecycle.,4,Managed & Optimized
+Data Engineering,Performance Optimization,Materializations & Caching,Cache invalidation and refresh policies are standardized and reviewed.,4,Managed & Optimized
+Data Engineering,Performance Optimization,Data Volume Management,"Tiered storage and compression used based on data age, cost, or access frequency.",4,Managed & Optimized
+Data Engineering,Performance Optimization,Compute Resource Management,"Workload management policies applied (e.g., priority queues, concurrency scaling).",4,Managed & Optimized
+Data Engineering,Performance Optimization,Performance Testing,Test suites include performance tests; canary deployments used for changes.,4,Managed & Optimized
+Data Engineering,Performance Optimization,Observability & Alerting,Alerts configured for anomalies or regressions; alert fatigue is mitigated.,4,Managed & Optimized
+Data Engineering,Performance Optimization,Optimization Ownership,Performance is a shared responsibility; teams track and report improvement.,4,Managed & Optimized
+Data Engineering,Performance Optimization,Feedback & End-User Experience,SLAs defined for data freshness and dashboard speed; monitored regularly.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Elasticity & Auto-Scaling,Autoscaling based on predictive metrics; limited human intervention.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Modular Architecture,Modular DAGs or microservices orchestrated for parallel execution.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Multi-Environment Management,Environments are cloned and synchronized easily for testing and scale validation.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Infrastructure as Code (IaC),CI/CD pipeline integrates IaC testing and approval workflows.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Vendor Lock-In & Portability,Migration strategy is defined and tested periodically.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Throughput & Latency Handling,Load testing is routine; pipelines designed for high-concurrency and SLA adherence.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Cost Optimization at Scale,Cost-based optimization is part of development process; budgets assigned per team.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,High Availability & Redundancy,HA is enforced for all critical components; recovery tested regularly.,4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Multi-Tenancy / Multi-Team Scale,"Team-level resource tracking, RBAC, and cost metering available.",4,Managed & Optimized
+Data Engineering,Scalability & Infrastructure,Scalability Testing & Planning,"Load testing, capacity plans, and infrastructure scaling are integrated into roadmap.",4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Workflow Orchestration Tooling,All pipelines are orchestrated; jobs modularized and version-controlled.,4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Triggering & Scheduling,Event-driven architectures supported at scale with SLA-aware scheduling.,4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Monitoring & Alerting,"Alerting is SLA-driven with automatic escalation, dashboards, and remediation tracking.",4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Failure Handling & Retries,Graceful error handling built into pipeline design; workflows automatically recover.,4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Parameterization & Reuse,DAGs are dynamically constructed and environment-aware.,4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Documentation & Discoverability,Visual DAGs and lineage graphs available; documentation auto-generated.,4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Secrets & Credential Management,Secrets are managed via RBAC with rotation policies and audit logging.,4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Idempotency & State Management,Incremental logic and job state tracking automated; reprocessing is efficient.,4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,Multi-Tenant Workflow Support,Namespaces or tenants defined in orchestration tool; RBAC enforced.,4,Managed & Optimized
+Data Engineering,Automation & Workflow Orchestration,CI/CD & Workflow Testing,"CI/CD pipelines support DAG validation, dry-runs, and integration testing.",4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Pipeline Health Monitoring,"Execution metrics (e.g., volume, duration) monitored; alerts on SLA breaches.",4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Data Quality Monitoring,DQ coverage across pipeline stages; alerts trigger remediation workflows.,4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Infrastructure Resource Monitoring,"Auto-scaling, threshold-based alerts, and usage KPIs tracked.",4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Logging Practices,"Logs are searchable, include metadata (e.g., run ID, org), and support incident analysis.",4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Alerting & Escalation,On-call rotation and severity-based escalation in place.,4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Lineage & Traceability,End-to-end lineage captured and visualized; used for debugging and RCA.,4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Dashboards & Observability Tools,Unified observability platform supports cross-pipeline and cross-team metrics.,4,Managed & Optimized
+Data Engineering,Observability & Monitoring,SLAs/SLOs for Data Pipelines,"SLA breaches are tracked, reported, and remediated; part of team KPIs.",4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Incident Management,Incident response process is standardized with postmortem reviews.,4,Managed & Optimized
+Data Engineering,Observability & Monitoring,Proactive Monitoring / Anomaly Detection,ML-based anomaly detection with contextual alerts and suppression of noise.,4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Backup Coverage,"Systematic backup of raw, transformed, and metadata assets.",4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Frequency & Retention,"Retention policies tiered by data class (critical, archived); retention enforced.",4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Monitoring & Validation,Automated validation and checksuming; alerts and dashboards integrated.,4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Disaster Recovery Planning,Plan is tested annually or semi-annually; includes contact trees and dependencies.,4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Recovery Testing / Drills,Full recovery drills simulated under load and validated.,4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Infrastructure Resilience,"Multi-zone, auto-failover enabled for all production infrastructure.",4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Data Versioning & Time Travel,Incremental snapshots and restore points created automatically across systems.,4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Access Controls for Backups,Fine-grained access policies enforced and audit logs reviewed.,4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Recovery Time (RTO),SLA-backed recovery with metrics for performance; MTTR tracked.,4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Recovery Point (RPO),RPO under 1 hour for critical systems with differential backups.,4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Third-Party Dependency Coverage,"Cross-cloud redundancy, export policies, and snapshot syncs automated.",4,Managed & Optimized
+Data Engineering,Disaster Recovery & Backup,Post-Recovery Validation,"Automated smoke tests, integrity checks, and downstream app validation.",4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,Data Discoverability,"Well-maintained catalog with lineage, owners, tags; searchable and integrated with tools.",4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,Access & Permissions,Automated role-based access with policy enforcement and audit trails.,4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,BI & Self-Service Tooling,Non-technical users can build and modify reports confidently and safely.,4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,Data Literacy & Enablement,"Regular enablement programs, onboarding kits, and office hours.",4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,Metric Standardization,Metrics centralized and exposed via governed semantic layers or dbt models.,4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,Request Workflows,Requests are triaged; repeat requests turned into self-serve assets.,4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,Data Access Governance,"Automated masking, auditing, and data classification integrated with tooling.",4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,Integration with Operational Tools,Reverse ETL or embedded analytics connects data to business tools.,4,Managed & Optimized
+Data Engineering,Self-Service & Democratization,Monitoring Usage & Feedback,Usage analytics drives prioritization and UX improvements.,4,Managed & Optimized
+Data Engineering,Integration & APIs,System Integration,Well-structured integration layer supports both batch and real-time sync; dependencies are monitored.,4,Managed & Optimized
+Data Engineering,Integration & APIs,API Design & Exposure,"Consistent API development process; APIs versioned, secured, and tested; used across teams.",4,Managed & Optimized
+Data Engineering,Integration & APIs,Inbound API Usage,Inbound API integrations are monitored and resilient to schema/version changes; metadata captured.,4,Managed & Optimized
+Data Engineering,Integration & APIs,Outbound Data Activation,Reverse ETL integrated with data models; updated on schedule or triggers; changes traceable.,4,Managed & Optimized
+Data Engineering,Integration & APIs,Monitoring & Reliability,"Dashboards and alerts track integration health, latency, and retries; SLAs widely enforced.",4,Managed & Optimized
+Data Engineering,Integration & APIs,Security & Access Control,Secure API gateway or proxy in place; RBAC and rate-limiting enforced; all access logged and audited.,4,Managed & Optimized
+Data Engineering,Integration & APIs,Documentation & Governance,Well-maintained API & integration documentation; integrated with catalogs or portals; impact analysis possible.,4,Managed & Optimized
+Data Engineering,Cost Management,Cost Visibility & Reporting,"Cost dashboards with breakdowns by team, pipeline, workload; reviewed routinely.",4,Managed & Optimized
+Data Engineering,Cost Management,Cost Attribution,Systematic chargeback or showback models in place across departments.,4,Managed & Optimized
+Data Engineering,Cost Management,Budget Governance & Controls,"Quotas, limits, and alerting enforced; budget targets set per team or project.",4,Managed & Optimized
+Data Engineering,Cost Management,Monitoring & Alerts,Integrated cost anomaly detection with metadata context and ownership.,4,Managed & Optimized
+Data Engineering,Cost Management,Optimization Practices,Cost optimization is a standard phase of development lifecycle.,4,Managed & Optimized
+Data Engineering,Cost Management,Forecasting & Planning,Forecasts integrated into planning and tracked against actuals.,4,Managed & Optimized
+Data Engineering,Cost Management,Cultural Awareness,Engineers are held accountable for cost decisions; culture embraces cost-consciousness.,4,Managed & Optimized
+Data Engineering,Cost Management,Tools & Automation,Automated tooling integrated with orchestration and observability stack.,4,Managed & Optimized
+Data Engineering,Data Ingestion,Ingestion Framework & Architecture,Highly scalable ingestion framework with self-service onboarding and pipeline templating.,5,Scalable & Autonomous
+Data Engineering,Data Ingestion,Data Source Coverage,All data sources are onboarded via catalog and templates; onboarding SLAs are met consistently.,5,Scalable & Autonomous
+Data Engineering,Data Ingestion,Change Data Capture (CDC),Dynamic CDC with schema evolution support; zero-downtime deployments; fully automated.,5,Scalable & Autonomous
+Data Engineering,Data Ingestion,Monitoring & Alerting,Predictive anomaly detection and auto-remediation; issue resolution is logged and traced.,5,Scalable & Autonomous
+Data Engineering,Data Ingestion,Validation & Quality Checks,Rule-based validation is fully automated; exceptions routed to owners with suggested fixes.,5,Scalable & Autonomous
+Data Engineering,Data Ingestion,Metadata & Lineage,Metadata ingestion is automated and updated in real-time with fine-grained lineage and impact analysis.,5,Scalable & Autonomous
+Data Engineering,Data Ingestion,Security & Compliance,"Full encryption, masking, and compliance validation baked into ingestion; access reviews are automated.",5,Scalable & Autonomous
+Data Engineering,Data Ingestion,Operational Maturity,Self-service ingestion flows allow teams to onboard sources in hours; IaC and CI/CD integrated.,5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Architecture & Design,"Highly modular, decoupled architecture with strong governance and separation of concerns.",5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Schema Management & Modeling,"Full modeling lifecycle managed as code, with validations, lineage, and semantic layer integration.",5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Partitioning & Performance Design,Automatic partitioning/tiering based on workload; performance optimization is continuous and observable.,5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Storage Scalability & Cost,"Cost is forecasted, simulated, and programmatically optimized across platforms and compute models.",5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Access Control & Permissions,"Attribute-based access control with full automation, audit trails, and zero-trust principles applied.",5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Data Lineage & Documentation,"Fully integrated, automatically updated lineage with impact analysis and end-to-end visibility.",5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Reliability & SLAs,"Dynamic SLA management, anomaly detection, and automatic backfills or alerts based on lineage.",5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Environment Management,Infrastructure as code; full automation of data model and infra deployment across environments.,5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Tooling & Observability,Predictive observability with SLA forecasting and automated impact analysis on data consumers.,5,Scalable & Autonomous
+Data Engineering,Data Storage & Warehousing,Governance & Compliance,"Integrated compliance controls, DLP enforcement, and active alerting on policy violations.",5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Data Quality Monitoring,"Predictive, anomaly-based monitoring with incident auto-triage. Coverage spans 100% of critical data assets.",5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Data Validation & Testing,Coverage enforced with 100% testable assets. Validation lineage documented.,5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Ownership & Stewardship,Stewardship culture embedded org-wide; issue resolution is KPI-driven.,5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Cataloging & Discoverability,"Federated catalog with lineage, quality, usage, and sensitivity metadata deeply integrated.",5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Data Lineage,End-to-end active lineage across platforms. Impact analysis and rollback tools in place.,5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Master & Reference Data Management,"Automated entity resolution, versioning, and change propagation.",5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Access Control & Classification,Policy-based access control. Access logs monitored and integrated with zero-trust systems.,5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Policy Enforcement & Compliance,"Continuous compliance enforcement with dashboards, alerts, and legal attestation.",5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Change Management & Contracts,Fully automated enforcement of schema contracts with coverage dashboards and rollback.,5,Scalable & Autonomous
+Data Engineering,Data Quality & Governance,Incident Management & RCA,"Incident detection, resolution, and remediation fully automated. RCA loop feeds platform improvements.",5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Modeling Approach & Standards,"Modeling decisions are strategic, aligned to domain modeling practices, and reviewed regularly across teams.",5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Semantic Consistency,"Full semantic standardization with governance, versioning, and self-service access for business teams.",5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Collaboration & Requirements,Cross-functional modeling rituals; shared modeling artifacts treated as data products.,5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Model Versioning & Change Mgmt,"Fully automated deployment workflows, schema diffs, rollback support, and impact analysis tools in use.",5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Documentation & Discoverability,"Rich documentation integrated with lineage, popularity, metrics, and examples; self-service discovery for all users.",5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Schema Enforcement & Contracts,"Fully automated contract validation, testing, versioning, and lineage-aware enforcement across environments.",5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Normalization & Denormalization,"Dynamic materialization strategies used based on query workload, model usage, and SLAs.",5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Tooling & Frameworks,"Unified modeling ecosystem with plugin-based extensibility, governance, and metrics observability.",5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Testing & Data Quality,AI-driven model quality monitoring; quality KPIs tracked per model with auto-remediation options.,5,Scalable & Autonomous
+Data Engineering,Data Modeling & Schema Design,Usability for Analytics,"Analytics-ready data products with built-in guides, templates, and business-contextualized models.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,Types & Scope of Metadata,"Full-lifecycle metadata (technical, business, operational, behavioral) comprehensively captured and leveraged organization-wide.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,Metadata Collection Process,Real-time metadata synchronization across all systems and stages of data lifecycle.,5,Scalable & Autonomous
+Data Engineering,Metadata Management,Tooling & Platform Integration,"Metadata is platform-agnostic, API-driven, extensible, and a first-class asset in the ecosystem.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,Search & Discovery,"Intelligent search with context-aware suggestions, relevance scoring, and federated discovery across domains and platforms.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,Documentation & Descriptions,"Documentation auto-generated from models, monitored for completeness, and enhanced via community contributions and lineage context.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,Data Lineage,"Active, end-to-end lineage updated continuously; lineage is queryable and integrated with schema diffs, testing, and alerting.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,Stewardship & Ownership,"Federated stewardship with SLAs, usage-based ownership metrics, and proactive metadata curation.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,"Policy, Classification & Governance","Automated classification, enforcement, and policy versioning integrated with security and compliance tools.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,Automation & Self-Service,"Metadata actively drives auto-generated pipelines, lineage-aware transformations, and self-healing systems.",5,Scalable & Autonomous
+Data Engineering,Metadata Management,Cultural Adoption,Metadata is treated as an organizational asset; its maintenance is incentivized and measured.,5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Access Control & Authorization,"Just-in-time, least-privilege access with audit trails and behavioral alerts.",5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Data Classification,"Classification is dynamic, integrated with masking and access control policies.",5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Encryption & Masking,"Fine-grained field-level encryption/masking, integrated with policy-based access control.",5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Audit Logging & Monitoring,"Real-time audit trail monitoring with anomaly detection, SIEM integration, and automated escalations.",5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Privacy by Design,Privacy-by-default and by-design is part of development lifecycle; enforced via DevSecOps pipelines.,5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Subject Rights & Consent,Rights fulfillment fully automated with auditability and minimal manual intervention.,5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Vendor & Third-Party Risk,"Vendors evaluated, scored, and monitored for compliance; data access is scoped and audited continuously.",5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Secure Development & Deployment,DevSecOps culture fully adopted; vulnerabilities triaged and mitigated proactively in pipelines.,5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Incident Response Readiness,"Continuous incident detection and response with automated containment, forensic traceability, and stakeholder notification.",5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Compliance & Regulatory Readiness,"Continuous compliance monitoring, reporting, and documentation across all systems; embedded into risk governance program.",5,Scalable & Autonomous
+Data Engineering,Data Security & Privacy,Security & Privacy Culture,Organization-wide culture of proactive privacy/security; security-by-default approach integrated into all processes.,5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Pipeline & Job Performance,Continuous profiling and auto-scaling applied; tuning is automated and regression-tested.,5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Query Performance Tuning,"Autonomic tuning (e.g., Snowflake advisor, Databricks optimizer) integrated; queries benchmarked pre-deploy.",5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Partitioning & Indexing,Smart or dynamic partitioning based on access patterns; self-healing indexing used.,5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Materializations & Caching,Adaptive caching; results precomputed based on usage heatmaps and predictive demand.,5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Data Volume Management,"Automated pruning, TTLs, or roll-ups in place; storage scales predictively.",5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Compute Resource Management,Dynamic scaling by workload type; cost vs performance is continually balanced.,5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Performance Testing,Performance regression tests automated in CI/CD with alerting and rollback triggers.,5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Observability & Alerting,Predictive observability detects degradation before it affects users; ML-assisted alert tuning.,5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Optimization Ownership,Teams incentivized and measured on performance efficiency; SLOs are met or exceeded.,5,Scalable & Autonomous
+Data Engineering,Performance Optimization,Feedback & End-User Experience,Real-user monitoring in place; feedback integrated into prioritization pipeline automatically.,5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Elasticity & Auto-Scaling,Fully elastic architecture with real-time workload adaptation and usage-based optimization.,5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Modular Architecture,"Componentized, loosely coupled, reusable across workloads; supports horizontal and vertical scaling.",5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Multi-Environment Management,"Environments are ephemeral, consistent, auto-provisioned, and auditable.",5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Infrastructure as Code (IaC),IaC is fully integrated into lifecycle management with drift detection and automated recovery.,5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Vendor Lock-In & Portability,Multi-cloud or hybrid capability with abstracted orchestration; infrastructure is portable.,5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Throughput & Latency Handling,"Elastic buffering, sharding, and dynamic queueing mitigate performance degradation at scale.",5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Cost Optimization at Scale,Cost attribution per feature or team; auto-tuning of compute and storage based on cost-performance trade-offs.,5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,High Availability & Redundancy,Multi-region active-active setup with automated failover and no data loss; RTO < 1 min.,5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Multi-Tenancy / Multi-Team Scale,"Multi-tenant scalable architecture with clear boundaries, access control, and billing observability per org/team.",5,Scalable & Autonomous
+Data Engineering,Scalability & Infrastructure,Scalability Testing & Planning,"Continuous scalability monitoring and proactive modeling using usage telemetry, data growth trends, and forecasting tools.",5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Workflow Orchestration Tooling,"Workflows are dynamic, auto-generated, and orchestrated with metadata-driven execution.",5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Triggering & Scheduling,"Orchestration integrates real-time events, business logic, and dynamic conditions.",5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Monitoring & Alerting,Predictive alerts with self-healing pipelines and anomaly detection built-in.,5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Failure Handling & Retries,Pipelines are fault-tolerant and context-aware with automated fallback and rollback strategies.,5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Parameterization & Reuse,"Pipelines are composable, metadata-driven, and reusable across domains and teams.",5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Documentation & Discoverability,Fully searchable workflow repository with interactive lineage and audit trails.,5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Secrets & Credential Management,"Zero-trust model with dynamic secrets provisioning, expiration, and revocation.",5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Idempotency & State Management,Full lineage-aware execution with smart reprocessing and persistent DAG state management.,5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,Multi-Tenant Workflow Support,"Fully isolated, scalable, multi-tenant orchestration with billing, usage tracking, and auditability.",5,Scalable & Autonomous
+Data Engineering,Automation & Workflow Orchestration,CI/CD & Workflow Testing,"Automated deployment pipelines with test coverage, canary runs, and rollback on failure.",5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Pipeline Health Monitoring,Pipelines are instrumented with real-time telemetry and self-healing capabilities.,5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Data Quality Monitoring,"Comprehensive profiling, anomaly detection, and lineage-aware DQ management.",5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Infrastructure Resource Monitoring,Predictive infrastructure scaling with cost/performance optimization.,5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Logging Practices,Fully traceable logs with correlation IDs and integration into observability stack.,5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Alerting & Escalation,"Alerts are prioritized, deduplicated, and automatically triaged based on impact and history.",5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Lineage & Traceability,"Lineage is live, automated, and integrated into incident management and compliance tooling.",5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Dashboards & Observability Tools,"Observability is federated, role-based, and used by both tech and business stakeholders.",5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,SLAs/SLOs for Data Pipelines,"SLAs are predictive, business-driven, and backed by automated SLA management workflows.",5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Incident Management,"Automated detection, ticket creation, root cause tagging, and incident learning repository.",5,Scalable & Autonomous
+Data Engineering,Observability & Monitoring,Proactive Monitoring / Anomaly Detection,"Self-adaptive monitoring, root-cause prediction, and automated corrective action suggested or executed.",5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Backup Coverage,Comprehensive and automated backup across systems with dependency-aware coverage.,5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Frequency & Retention,"Dynamic, policy-based retention with auto-tiering and compliance awareness.",5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Monitoring & Validation,"Continuous backup testing, simulated restores, and backup audits scheduled and tracked.",5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Disaster Recovery Planning,"Live, version-controlled DR playbook with regular drills and rapid failover protocols.",5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Recovery Testing / Drills,"Scheduled, auditable, scenario-based drills across systems with postmortems and RCA.",5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Infrastructure Resilience,Multi-region active-active clusters with auto-scaling and zero downtime resilience.,5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Data Versioning & Time Travel,"Full support for point-in-time recovery, change tracking, and rollback across pipeline states.",5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Access Controls for Backups,"Dynamic access controls, encryption at rest/in-transit, and compliance-aligned auditing.",5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Recovery Time (RTO),Recovery is near-instantaneous for tier-1 systems with failover automation.,5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Recovery Point (RPO),Near-zero RPO for mission-critical data with real-time streaming replication.,5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Third-Party Dependency Coverage,"Vendor-agnostic, tested fallback architectures with automated export/import recovery paths.",5,Scalable & Autonomous
+Data Engineering,Disaster Recovery & Backup,Post-Recovery Validation,Full regression testing and automated functional validation post-recovery with user notification.,5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,Data Discoverability,"Intelligent discovery via searchable, context-rich, auto-tagged catalogs with real-time updates.",5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,Access & Permissions,"Self-service, just-in-time access approvals with sensitivity-aware routing and de-provisioning.",5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,BI & Self-Service Tooling,Fully self-serve analytics experience; semantic layers abstract SQL; integrated data exploration tooling.,5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,Data Literacy & Enablement,Embedded data literacy culture; data champions in teams; learning resources integrated in tools.,5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,Metric Standardization,"Fully governed, API-accessible metrics store with lineage, usage tracking, and real-time validation.",5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,Request Workflows,Proactive self-service enablement; repeat requests monitored and productized into datasets or tools.,5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,Data Access Governance,"Continuous monitoring for policy breaches, dynamic controls based on context and usage patterns.",5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,Integration with Operational Tools,"Operational workflows powered by real-time, governed, and embedded data flows.",5,Scalable & Autonomous
+Data Engineering,Self-Service & Democratization,Monitoring Usage & Feedback,"Feedback loops built-in; usage patterns used to optimize datasets, metrics, and UX dynamically.",5,Scalable & Autonomous
+Data Engineering,Integration & APIs,System Integration,"Modular, reusable integration architecture; streaming-first and event-driven designs; minimal downtime or latency.",5,Scalable & Autonomous
+Data Engineering,Integration & APIs,API Design & Exposure,"Fully governed, discoverable data APIs (REST/GraphQL); API-as-a-product mindset with SLAs, observability, and support.",5,Scalable & Autonomous
+Data Engineering,Integration & APIs,Inbound API Usage,"Ingestion pipelines are auto-scaling, auto-healing, and adaptive to schema/version evolution; centralized connector frameworks used.",5,Scalable & Autonomous
+Data Engineering,Integration & APIs,Outbound Data Activation,Orchestrated real-time activation pipelines; feedback loops from destination systems improve models and sync frequency.,5,Scalable & Autonomous
+Data Engineering,Integration & APIs,Monitoring & Reliability,"Proactive, anomaly-based detection; automated root cause analysis; self-healing pipelines; SLA adherence validated automatically.",5,Scalable & Autonomous
+Data Engineering,Integration & APIs,Security & Access Control,"Full Zero-Trust API security; dynamic secrets, OAuth2, mutual TLS, and access contracts per integration partner.",5,Scalable & Autonomous
+Data Engineering,Integration & APIs,Documentation & Governance,Federated governance with data product owners; integrations traceable by lineage; developer portals with sandbox environments.,5,Scalable & Autonomous
+Data Engineering,Cost Management,Cost Visibility & Reporting,"Real-time, granular, role-based reporting; costs embedded in engineering workflows and decisions.",5,Scalable & Autonomous
+Data Engineering,Cost Management,Cost Attribution,"Fully automated attribution and billing; tied to goals, usage trends, and outcomes.",5,Scalable & Autonomous
+Data Engineering,Cost Management,Budget Governance & Controls,"Dynamic, policy-driven spend governance based on behavior, usage, and priorities.",5,Scalable & Autonomous
+Data Engineering,Cost Management,Monitoring & Alerts,Predictive anomaly detection; automated root-cause analysis and recommendations.,5,Scalable & Autonomous
+Data Engineering,Cost Management,Optimization Practices,Continuous optimization via automation and monitoring; savings tracked and reported.,5,Scalable & Autonomous
+Data Engineering,Cost Management,Forecasting & Planning,Scenario-based forecasting with alerts for overages and predictive scaling.,5,Scalable & Autonomous
+Data Engineering,Cost Management,Cultural Awareness,Cost-awareness embedded across roles; incentives aligned with efficient design and business impact.,5,Scalable & Autonomous
+Data Engineering,Cost Management,Tools & Automation,"End-to-end tooling with predictive insights, cost-as-code policies, and intelligent remediation recommendations.",5,Scalable & Autonomous
